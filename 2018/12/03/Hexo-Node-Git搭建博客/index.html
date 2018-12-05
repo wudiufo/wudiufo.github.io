@@ -98,7 +98,7 @@
     fastclick: false,
     lazyload: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -136,7 +136,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://wudiufo.github.io/2018/12/03/Hexo-Node-Git搭建博客/创建仓库.png">
 <meta property="og:image" content="http://wudiufo.github.io/2018/12/03/Hexo-Node-Git搭建博客/设置5种代码高亮主题.png">
-<meta property="og:updated_time" content="2018-12-05T14:20:38.650Z">
+<meta property="og:updated_time" content="2018-12-05T17:39:51.170Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Node+Git搭建博客">
 <meta name="twitter:description" content="从零开始搭建博客第一部分，Github注册及Github Pages建立 什么是 Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
@@ -466,10 +466,10 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo+Node+Git搭建博客
+          <h2 class="post-title" itemprop="name headline">Hexo+Node+Git搭建博客
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -508,7 +508,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-05 22:20:38" itemprop="dateModified" datetime="2018-12-05T22:20:38+08:00">2018-12-05</time>
+                <time title="修改时间：2018-12-06 01:39:51" itemprop="dateModified" datetime="2018-12-06T01:39:51+08:00">2018-12-06</time>
               
             
           </span>
@@ -541,6 +541,13 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
           
             <div class="post-symbolscount">
@@ -553,7 +560,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">32k</span>
+                <span title="本文字数">34k</span>
               
 
               
@@ -567,7 +574,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">29 分钟</span>
+                <span title="阅读时长">31 分钟</span>
               
             </div>
           
@@ -983,7 +990,62 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Title #标题</span><br><span class="line">date: YYYY-MM-DD HH:MM:SS #文件建立日期</span><br><span class="line">tags: #标签（不适用于分页）</span><br><span class="line">- 标签1</span><br><span class="line">- 标签2</span><br><span class="line">categories: #分类（不适用于分页）</span><br><span class="line">- 分类1</span><br><span class="line">- 分类2</span><br><span class="line">layout: #布局</span><br><span class="line">updated: YYYY-MM-DD HH:MM:SS #文件更新日期</span><br><span class="line">comments：true #开启文章的评论功能</span><br><span class="line">permalink：覆盖文章网址</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p><strong>注意，属性和属性值之间必须有一个空格，否则会解析错误</strong></p>
 <h4 id="3-首页显示"><a href="#3-首页显示" class="headerlink" title="3.首页显示"></a>3.首页显示</h4><ul>
-<li>在Hexo框架博客的首页会显示文章的内容（默认显示文章的全部内容），如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简，只需在文章中使用 <code>&lt;!--more--&gt;</code>标志，表示只会显示标志前面的内容</li>
+<li><p>1.在Hexo框架博客的首页会显示文章的内容（默认显示文章的全部内容），如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简，只需在文章中使用 <code>&lt;!--more--&gt;</code>标志，表示只会显示标志前面的内容</p>
+</li>
+<li><p>2.推荐使用：</p>
+<p>在主题配置文件中找到<code>auto_excerpt</code>，将enable变为true，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true</span><br><span class="line">  length: 150 #长度可自由调节</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="三，顶部统计每篇文章阅读次数"><a href="#三，顶部统计每篇文章阅读次数" class="headerlink" title="三，顶部统计每篇文章阅读次数"></a>三，顶部统计每篇文章阅读次数</h3><p>在主题配置文件中查找<code>busuanzi_count</code>,将其按照如下方式修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Show Views/Visitors of the website/page with busuanzi.</span><br><span class="line"># Get more information on http://ibruce.info/2015/04/04/busuanzi</span><br><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
+<h2 id="七，生成sitemap站点地图"><a href="#七，生成sitemap站点地图" class="headerlink" title="七，生成sitemap站点地图"></a>七，生成sitemap站点地图</h2><p><strong>百度+谷歌都无法搜索到我的博客 不能忍</strong></p>
+<h3 id="1-先确认博客是否被收录"><a href="#1-先确认博客是否被收录" class="headerlink" title="1.先确认博客是否被收录"></a>1.先确认博客是否被收录</h3><ul>
+<li><p>在百度或者谷歌上面输入下面格式来判断，如果能搜索到就说明被收录，否则就没有。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">site:写你要搜索的域名 # site:wudiufo.github.io</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-创建站点地图文件"><a href="#2-创建站点地图文件" class="headerlink" title="2.创建站点地图文件"></a>2.创建站点地图文件</h3><blockquote>
+<p>站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。</p>
+</blockquote>
+<ul>
+<li>先安装一下，打开你的hexo博客根目录，分别用下面两个命令来安装针对谷歌和百度的插件:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>在博客根目录的_config.yml中添加如下代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>执行以下命令，编译你的博客</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在你的博客根目录的public下面发现生成了sitemap.xml以及baidusitemap.xml就表示成功了</p>
+</li>
+<li>执行 <code>hexo s</code> 看站点地图是否生成</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-让百度和谷歌收录我们的博客"><a href="#3-让百度和谷歌收录我们的博客" class="headerlink" title="3.让百度和谷歌收录我们的博客"></a>3.让百度和谷歌收录我们的博客</h3><h4 id="验证网站"><a href="#验证网站" class="headerlink" title="验证网站"></a>验证网站</h4><p>在百度和谷歌上分别搜索：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">site:写你要搜索的域名 # site:wudiufo.github.io</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其中的域名换成你的博客域名，如果此前没有进行过操作，应该是搜不到的，并且搜索出来的结果含有搜索引擎提交入口</li>
+<li><p>分别进入搜索引擎提交入口，添加域名，选择验证网站，有3种验证方式，本文推荐采用HTML标签验证</p>
+</li>
+<li><p>这里演示<a href="https://link.jianshu.com/?t=http://zhanzhang.baidu.com/dashboard/index" target="_blank" rel="noopener">百度站长平台</a></p>
+</li>
+</ul>
+<p>打开Hexo博客站点配置文件，添加以下两行:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">google_site_verification: #索引擎提供给你的HTML标签</span><br><span class="line">baidu-site-verification: #索引擎提供给你的HTML标签</span><br></pre></td></tr></table></figure>
+<p>然后运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
+<p>然后点击验证，就可以通过验证了</p>
+<h3 id="4，百度自动推送"><a href="#4，百度自动推送" class="headerlink" title="4，百度自动推送"></a>4，百度自动推送</h3><ul>
+<li><p>将<code>主题配置文件</code>中的<code>baidu_push</code>设置为<code>true</code>，然后将<code>/next/layout/_scripts</code>文件夹下面的<code>baidu-push.swig</code>文件中的 `</p>
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+<p>` 替换为百度提供的自动推送代码,如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">    <span class="keyword">var</span> curProtocol = <span class="built_in">window</span>.location.protocol.split(<span class="string">':'</span>)[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">if</span> (curProtocol === <span class="string">'https'</span>) &#123;</span><br><span class="line">        bp.src = <span class="string">'https://zz.bdstatic.com/linksubmit/push.js'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        bp.src = <span class="string">'http://push.zhanzhang.baidu.com/push.js'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 
       
@@ -1244,7 +1306,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-Hexo？"><span class="nav-number">1.</span> <span class="nav-text">什么是 Hexo？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-是一个快速、简洁且高效的博客框架。Hexo-使用-Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一：注册Github"><span class="nav-number">2.</span> <span class="nav-text">一：注册Github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：打开Github首页，点击Sign-up-进行注册。"><span class="nav-number">2.1.</span> <span class="nav-text">1：打开Github首页，点击Sign up 进行注册。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二：Github-Pages-静态网页建立"><span class="nav-number">3.</span> <span class="nav-text">二：Github Pages 静态网页建立</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：在新页面点击-NEW-按钮，创建属于自己的新仓库。"><span class="nav-number">3.1.</span> <span class="nav-text">1：在新页面点击 NEW 按钮，创建属于自己的新仓库。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-点击-Code"><span class="nav-number">3.2.</span> <span class="nav-text">2: 点击 Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-点击-Create-new-file"><span class="nav-number">3.3.</span> <span class="nav-text">3: 点击 Create new file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-输入-index-html，在-Edit-new-file-书写内容。"><span class="nav-number">3.4.</span> <span class="nav-text">4: 输入 index.html，在 Edit new file 书写内容。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5：点击-Commit-new-file-进行创建。"><span class="nav-number">3.5.</span> <span class="nav-text">5：点击 Commit new file 进行创建。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6：用浏览器打开-用户名-github-io"><span class="nav-number">3.6.</span> <span class="nav-text">6：用浏览器打开 用户名.github.io</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三：Hexo博客本地环境安装"><span class="nav-number">4.</span> <span class="nav-text">三：Hexo博客本地环境安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装-Node"><span class="nav-number">4.1.</span> <span class="nav-text">1: 安装 Node</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装-Git"><span class="nav-number">4.2.</span> <span class="nav-text">2: 安装 Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-初始化-Hexo"><span class="nav-number">4.3.</span> <span class="nav-text">4: 初始化 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">4.4.</span> <span class="nav-text">安装 Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四：本地博客发布到Github-Pages"><span class="nav-number">5.</span> <span class="nav-text">四：本地博客发布到Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：需要在Github上创建好Github-Pages仓库"><span class="nav-number">5.1.</span> <span class="nav-text">1：需要在Github上创建好Github Pages仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2：安装将-Hexo-部署到-Git-的插件"><span class="nav-number">5.2.</span> <span class="nav-text">2：安装将 Hexo 部署到 Git 的插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3：将本地目录与Github关联起来"><span class="nav-number">5.3.</span> <span class="nav-text">3：将本地目录与Github关联起来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改Hexo站点的-config-yml文件"><span class="nav-number">5.4.</span> <span class="nav-text">4: 修改Hexo站点的 _config.yml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-保存配置，将生成的本地页面上传至Github"><span class="nav-number">5.5.</span> <span class="nav-text">5: 保存配置，将生成的本地页面上传至Github</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五：Hexo博客主题安装及Next主题个性化修改"><span class="nav-number">6.</span> <span class="nav-text">五：Hexo博客主题安装及Next主题个性化修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：主题选择"><span class="nav-number">6.1.</span> <span class="nav-text">1：主题选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2：主题修改"><span class="nav-number">6.2.</span> <span class="nav-text">2：主题修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主题安装"><span class="nav-number">6.2.1.</span> <span class="nav-text">主题安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改菜单及创建分类页"><span class="nav-number">6.2.2.</span> <span class="nav-text">修改菜单及创建分类页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改主题风格"><span class="nav-number">6.2.3.</span> <span class="nav-text">修改主题风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置作者头像"><span class="nav-number">6.2.4.</span> <span class="nav-text">设置作者头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置作者昵称与站点描述"><span class="nav-number">6.2.5.</span> <span class="nav-text">设置作者昵称与站点描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置代码高亮主题"><span class="nav-number">6.2.6.</span> <span class="nav-text">设置代码高亮主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#侧边栏社交链接"><span class="nav-number">6.2.7.</span> <span class="nav-text">侧边栏社交链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开启打赏功能"><span class="nav-number">6.2.8.</span> <span class="nav-text">开启打赏功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#修改打赏字体不闪动"><span class="nav-number">6.2.8.1.</span> <span class="nav-text">修改打赏字体不闪动</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开启友情链接-or-侧边栏推荐阅读"><span class="nav-number">6.2.9.</span> <span class="nav-text">开启友情链接 or 侧边栏推荐阅读</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo生成博文插入图片显示不出来"><span class="nav-number">6.2.10.</span> <span class="nav-text">hexo生成博文插入图片显示不出来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章左侧的目录如何弄出来？"><span class="nav-number">6.2.11.</span> <span class="nav-text">文章左侧的目录如何弄出来？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置-RSS"><span class="nav-number">6.2.12.</span> <span class="nav-text">设置 RSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置网站图标"><span class="nav-number">6.2.13.</span> <span class="nav-text">设置网站图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现全站及文章字数统计及阅读时长"><span class="nav-number">6.2.14.</span> <span class="nav-text">实现全站及文章字数统计及阅读时长</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加顶部加载条"><span class="nav-number">6.2.15.</span> <span class="nav-text">添加顶部加载条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义鼠标样式"><span class="nav-number">6.2.16.</span> <span class="nav-text">自定义鼠标样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现点击出现桃心-以及-爆炸效果"><span class="nav-number">6.2.17.</span> <span class="nav-text">实现点击出现桃心 以及 爆炸效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改网页底部的小图标"><span class="nav-number">6.2.18.</span> <span class="nav-text">修改网页底部的小图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#去掉页面底部的强力驱动信息及设置备案信息"><span class="nav-number">6.2.19.</span> <span class="nav-text">去掉页面底部的强力驱动信息及设置备案信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加动态背景"><span class="nav-number">6.2.20.</span> <span class="nav-text">添加动态背景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#增加波浪背景动画"><span class="nav-number">6.2.20.1.</span> <span class="nav-text">增加波浪背景动画</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加静态背景"><span class="nav-number">6.2.21.</span> <span class="nav-text">添加静态背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在右上角实现fork-me-on-github按钮"><span class="nav-number">6.2.22.</span> <span class="nav-text">在右上角实现fork me on github按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增加回到顶部按钮及显示当前浏览进度"><span class="nav-number">6.2.23.</span> <span class="nav-text">增加回到顶部按钮及显示当前浏览进度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改顶部菜单与下方信息栏的间隙大小"><span class="nav-number">6.2.24.</span> <span class="nav-text">修改顶部菜单与下方信息栏的间隙大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站标题栏背景颜色"><span class="nav-number">6.2.25.</span> <span class="nav-text">网站标题栏背景颜色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为博客加上萌萌的动图"><span class="nav-number">6.2.26.</span> <span class="nav-text">为博客加上萌萌的动图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加DaoVoice-实现在线联系"><span class="nav-number">6.2.27.</span> <span class="nav-text">添加DaoVoice 实现在线联系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主页文章添加阴影效果"><span class="nav-number">6.2.28.</span> <span class="nav-text">主页文章添加阴影效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增加本地搜索功能"><span class="nav-number">6.2.29.</span> <span class="nav-text">增加本地搜索功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加图片懒加载"><span class="nav-number">6.2.30.</span> <span class="nav-text">添加图片懒加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加评论"><span class="nav-number">6.2.31.</span> <span class="nav-text">添加评论</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#添加方法"><span class="nav-number">6.2.31.1.</span> <span class="nav-text">添加方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码块复制功能"><span class="nav-number">6.2.32.</span> <span class="nav-text">代码块复制功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#前言"><span class="nav-number">6.2.32.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下载"><span class="nav-number">6.2.32.2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#导入"><span class="nav-number">6.2.32.3.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置"><span class="nav-number">6.2.32.4.</span> <span class="nav-text">配置</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六：Hexo撰写文章"><span class="nav-number">7.</span> <span class="nav-text">六：Hexo撰写文章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、创建文章"><span class="nav-number">7.1.</span> <span class="nav-text">一、创建文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、编写文章（基于Markdown）"><span class="nav-number">7.2.</span> <span class="nav-text">二、编写文章（基于Markdown）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-模板设置"><span class="nav-number">7.2.1.</span> <span class="nav-text">1.模板设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-头部设置"><span class="nav-number">7.2.2.</span> <span class="nav-text">2.头部设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-首页显示"><span class="nav-number">7.2.3.</span> <span class="nav-text">3.首页显示</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-Hexo？"><span class="nav-number">1.</span> <span class="nav-text">什么是 Hexo？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-是一个快速、简洁且高效的博客框架。Hexo-使用-Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一：注册Github"><span class="nav-number">2.</span> <span class="nav-text">一：注册Github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：打开Github首页，点击Sign-up-进行注册。"><span class="nav-number">2.1.</span> <span class="nav-text">1：打开Github首页，点击Sign up 进行注册。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二：Github-Pages-静态网页建立"><span class="nav-number">3.</span> <span class="nav-text">二：Github Pages 静态网页建立</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：在新页面点击-NEW-按钮，创建属于自己的新仓库。"><span class="nav-number">3.1.</span> <span class="nav-text">1：在新页面点击 NEW 按钮，创建属于自己的新仓库。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-点击-Code"><span class="nav-number">3.2.</span> <span class="nav-text">2: 点击 Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-点击-Create-new-file"><span class="nav-number">3.3.</span> <span class="nav-text">3: 点击 Create new file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-输入-index-html，在-Edit-new-file-书写内容。"><span class="nav-number">3.4.</span> <span class="nav-text">4: 输入 index.html，在 Edit new file 书写内容。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5：点击-Commit-new-file-进行创建。"><span class="nav-number">3.5.</span> <span class="nav-text">5：点击 Commit new file 进行创建。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6：用浏览器打开-用户名-github-io"><span class="nav-number">3.6.</span> <span class="nav-text">6：用浏览器打开 用户名.github.io</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三：Hexo博客本地环境安装"><span class="nav-number">4.</span> <span class="nav-text">三：Hexo博客本地环境安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装-Node"><span class="nav-number">4.1.</span> <span class="nav-text">1: 安装 Node</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装-Git"><span class="nav-number">4.2.</span> <span class="nav-text">2: 安装 Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-初始化-Hexo"><span class="nav-number">4.3.</span> <span class="nav-text">4: 初始化 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">4.4.</span> <span class="nav-text">安装 Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四：本地博客发布到Github-Pages"><span class="nav-number">5.</span> <span class="nav-text">四：本地博客发布到Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：需要在Github上创建好Github-Pages仓库"><span class="nav-number">5.1.</span> <span class="nav-text">1：需要在Github上创建好Github Pages仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2：安装将-Hexo-部署到-Git-的插件"><span class="nav-number">5.2.</span> <span class="nav-text">2：安装将 Hexo 部署到 Git 的插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3：将本地目录与Github关联起来"><span class="nav-number">5.3.</span> <span class="nav-text">3：将本地目录与Github关联起来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改Hexo站点的-config-yml文件"><span class="nav-number">5.4.</span> <span class="nav-text">4: 修改Hexo站点的 _config.yml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-保存配置，将生成的本地页面上传至Github"><span class="nav-number">5.5.</span> <span class="nav-text">5: 保存配置，将生成的本地页面上传至Github</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五：Hexo博客主题安装及Next主题个性化修改"><span class="nav-number">6.</span> <span class="nav-text">五：Hexo博客主题安装及Next主题个性化修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：主题选择"><span class="nav-number">6.1.</span> <span class="nav-text">1：主题选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2：主题修改"><span class="nav-number">6.2.</span> <span class="nav-text">2：主题修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主题安装"><span class="nav-number">6.2.1.</span> <span class="nav-text">主题安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改菜单及创建分类页"><span class="nav-number">6.2.2.</span> <span class="nav-text">修改菜单及创建分类页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改主题风格"><span class="nav-number">6.2.3.</span> <span class="nav-text">修改主题风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置作者头像"><span class="nav-number">6.2.4.</span> <span class="nav-text">设置作者头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置作者昵称与站点描述"><span class="nav-number">6.2.5.</span> <span class="nav-text">设置作者昵称与站点描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置代码高亮主题"><span class="nav-number">6.2.6.</span> <span class="nav-text">设置代码高亮主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#侧边栏社交链接"><span class="nav-number">6.2.7.</span> <span class="nav-text">侧边栏社交链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开启打赏功能"><span class="nav-number">6.2.8.</span> <span class="nav-text">开启打赏功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#修改打赏字体不闪动"><span class="nav-number">6.2.8.1.</span> <span class="nav-text">修改打赏字体不闪动</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开启友情链接-or-侧边栏推荐阅读"><span class="nav-number">6.2.9.</span> <span class="nav-text">开启友情链接 or 侧边栏推荐阅读</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo生成博文插入图片显示不出来"><span class="nav-number">6.2.10.</span> <span class="nav-text">hexo生成博文插入图片显示不出来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章左侧的目录如何弄出来？"><span class="nav-number">6.2.11.</span> <span class="nav-text">文章左侧的目录如何弄出来？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置-RSS"><span class="nav-number">6.2.12.</span> <span class="nav-text">设置 RSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置网站图标"><span class="nav-number">6.2.13.</span> <span class="nav-text">设置网站图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现全站及文章字数统计及阅读时长"><span class="nav-number">6.2.14.</span> <span class="nav-text">实现全站及文章字数统计及阅读时长</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加顶部加载条"><span class="nav-number">6.2.15.</span> <span class="nav-text">添加顶部加载条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义鼠标样式"><span class="nav-number">6.2.16.</span> <span class="nav-text">自定义鼠标样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现点击出现桃心-以及-爆炸效果"><span class="nav-number">6.2.17.</span> <span class="nav-text">实现点击出现桃心 以及 爆炸效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改网页底部的小图标"><span class="nav-number">6.2.18.</span> <span class="nav-text">修改网页底部的小图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#去掉页面底部的强力驱动信息及设置备案信息"><span class="nav-number">6.2.19.</span> <span class="nav-text">去掉页面底部的强力驱动信息及设置备案信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加动态背景"><span class="nav-number">6.2.20.</span> <span class="nav-text">添加动态背景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#增加波浪背景动画"><span class="nav-number">6.2.20.1.</span> <span class="nav-text">增加波浪背景动画</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加静态背景"><span class="nav-number">6.2.21.</span> <span class="nav-text">添加静态背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在右上角实现fork-me-on-github按钮"><span class="nav-number">6.2.22.</span> <span class="nav-text">在右上角实现fork me on github按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增加回到顶部按钮及显示当前浏览进度"><span class="nav-number">6.2.23.</span> <span class="nav-text">增加回到顶部按钮及显示当前浏览进度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改顶部菜单与下方信息栏的间隙大小"><span class="nav-number">6.2.24.</span> <span class="nav-text">修改顶部菜单与下方信息栏的间隙大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站标题栏背景颜色"><span class="nav-number">6.2.25.</span> <span class="nav-text">网站标题栏背景颜色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为博客加上萌萌的动图"><span class="nav-number">6.2.26.</span> <span class="nav-text">为博客加上萌萌的动图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加DaoVoice-实现在线联系"><span class="nav-number">6.2.27.</span> <span class="nav-text">添加DaoVoice 实现在线联系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主页文章添加阴影效果"><span class="nav-number">6.2.28.</span> <span class="nav-text">主页文章添加阴影效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增加本地搜索功能"><span class="nav-number">6.2.29.</span> <span class="nav-text">增加本地搜索功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加图片懒加载"><span class="nav-number">6.2.30.</span> <span class="nav-text">添加图片懒加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加评论"><span class="nav-number">6.2.31.</span> <span class="nav-text">添加评论</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#添加方法"><span class="nav-number">6.2.31.1.</span> <span class="nav-text">添加方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码块复制功能"><span class="nav-number">6.2.32.</span> <span class="nav-text">代码块复制功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#前言"><span class="nav-number">6.2.32.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下载"><span class="nav-number">6.2.32.2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#导入"><span class="nav-number">6.2.32.3.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置"><span class="nav-number">6.2.32.4.</span> <span class="nav-text">配置</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六：Hexo撰写文章"><span class="nav-number">7.</span> <span class="nav-text">六：Hexo撰写文章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、创建文章"><span class="nav-number">7.1.</span> <span class="nav-text">一、创建文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、编写文章（基于Markdown）"><span class="nav-number">7.2.</span> <span class="nav-text">二、编写文章（基于Markdown）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-模板设置"><span class="nav-number">7.2.1.</span> <span class="nav-text">1.模板设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-头部设置"><span class="nav-number">7.2.2.</span> <span class="nav-text">2.头部设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-首页显示"><span class="nav-number">7.2.3.</span> <span class="nav-text">3.首页显示</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三，顶部统计每篇文章阅读次数"><span class="nav-number">7.3.</span> <span class="nav-text">三，顶部统计每篇文章阅读次数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七，生成sitemap站点地图"><span class="nav-number">8.</span> <span class="nav-text">七，生成sitemap站点地图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-先确认博客是否被收录"><span class="nav-number">8.1.</span> <span class="nav-text">1.先确认博客是否被收录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-创建站点地图文件"><span class="nav-number">8.2.</span> <span class="nav-text">2.创建站点地图文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-让百度和谷歌收录我们的博客"><span class="nav-number">8.3.</span> <span class="nav-text">3.让百度和谷歌收录我们的博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#验证网站"><span class="nav-number">8.3.1.</span> <span class="nav-text">验证网站</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4，百度自动推送"><span class="nav-number">8.4.</span> <span class="nav-text">4，百度自动推送</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1283,7 +1345,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">34k</span>
+    <span title="站点总字数">36k</span>
   
 
   
@@ -1292,7 +1354,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
   
 </div>
 
@@ -1311,6 +1373,24 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -1787,6 +1867,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
