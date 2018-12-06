@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wudiufo.github.io/2018/12/04/Git%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    
+    <lastmod>2018-12-06T08:25:45.914Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wudiufo.github.io/2018/12/03/Hexo-Node-Git%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2018-12-06T07:08:41.769Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://wudiufo.github.io/about/index.html</loc>
     
     <lastmod>2018-12-05T06:43:27.225Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wudiufo.github.io/2018/12/04/Git%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    
-    <lastmod>2018-12-04T16:38:14.161Z</lastmod>
     
   </url>
   
