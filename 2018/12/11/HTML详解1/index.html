@@ -129,8 +129,9 @@
 
 
   <meta name="description" content="HTML 第一天目标能够写出基本的页面（里面包含图片、各种标签和链接） 开发工具我们主要用的 开发工具有   chrome  、  sublime 、  photoshop 浏览器（显示）1浏览器是网页显示、运行的平台，常用的浏览器有IE、火狐（Firefox）、谷歌（Chrome）、Safari和Opera等。我们平时称为五大浏览器。  查看浏览器占有的市场份额（知晓）查看网站： http://">
+<meta name="keywords" content="HTML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Haiyang">
+<meta property="og:title" content="HTML详解1">
 <meta property="og:url" content="http://wudiufo.github.io/2018/12/11/HTML详解1/index.html">
 <meta property="og:site_name" content="Haiyang">
 <meta property="og:description" content="HTML 第一天目标能够写出基本的页面（里面包含图片、各种标签和链接） 开发工具我们主要用的 开发工具有   chrome  、  sublime 、  photoshop 浏览器（显示）1浏览器是网页显示、运行的平台，常用的浏览器有IE、火狐（Firefox）、谷歌（Chrome）、Safari和Opera等。我们平时称为五大浏览器。  查看浏览器占有的市场份额（知晓）查看网站： http://">
@@ -175,9 +176,12 @@
 <meta property="og:image" content="http://wudiufo.github.io/2018/12/11/HTML详解1/textarea.png">
 <meta property="og:image" content="http://wudiufo.github.io/2018/12/11/HTML详解1/1.png">
 <meta property="og:image" content="http://wudiufo.github.io/2018/12/11/HTML详解1/2.png">
-<meta property="og:updated_time" content="2018-12-11T15:03:18.794Z">
+<meta property="og:image" content="http://wudiufo.github.io/2018/12/11/HTML详解1/11.jpg">
+<meta property="og:image" content="http://wudiufo.github.io/2018/12/11/HTML详解1/12.png">
+<meta property="og:image" content="http://wudiufo.github.io/2018/12/11/HTML详解1/11.png">
+<meta property="og:updated_time" content="2018-12-11T15:22:12.762Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Haiyang">
+<meta name="twitter:title" content="HTML详解1">
 <meta name="twitter:description" content="HTML 第一天目标能够写出基本的页面（里面包含图片、各种标签和链接） 开发工具我们主要用的 开发工具有   chrome  、  sublime 、  photoshop 浏览器（显示）1浏览器是网页显示、运行的平台，常用的浏览器有IE、火狐（Firefox）、谷歌（Chrome）、Safari和Opera等。我们平时称为五大浏览器。  查看浏览器占有的市场份额（知晓）查看网站： http://">
 <meta name="twitter:image" content="http://wudiufo.github.io/2018/12/11/HTML详解1/b.png">
 
@@ -198,7 +202,7 @@
   };
 </script>
 
-  <title> | Haiyang</title>
+  <title>HTML详解1 | Haiyang</title>
   
 
 
@@ -507,7 +511,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">HTML详解1
               
             
           </h2>
@@ -532,7 +536,7 @@
                 
               
 
-              <time title="创建时间：2018-12-11 22:09:59 / 修改时间：23:03:18" itemprop="dateCreated datePublished" datetime="2018-12-11T22:09:59+08:00">2018-12-11</time>
+              <time title="创建时间：2018-12-11 21:18:55 / 修改时间：23:22:12" itemprop="dateCreated datePublished" datetime="2018-12-11T21:18:55+08:00">2018-12-11</time>
             
 
             
@@ -542,6 +546,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -572,7 +594,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">18k</span>
+                <span title="本文字数">21k</span>
               
 
               
@@ -586,7 +608,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">17 分钟</span>
+                <span title="阅读时长">19 分钟</span>
               
             </div>
           
@@ -1050,6 +1072,51 @@
 <p>第4行，<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 字符集的配置</p>
 <p>第5行，<title>哈哈哈</title>  网页的标题，可以显示在浏览器的标签栏中。</p>
 <p>第7行，body标签就是网页的内容，用户能够看见。</p>
+<h1 id="一、复习上节课的内容"><a href="#一、复习上节课的内容" class="headerlink" title="一、复习上节课的内容"></a>一、复习上节课的内容</h1><p>网页的原理：用户输入网址之后，对应的服务器就发现有人请求我的网页了，所以这个服务器就会把网页和相关的图片、js文件、css文件、flash文件都通过HTTP协议传输到用户的电脑里面。HTML页面在用户的电脑里面进行渲染。HTTP协议指的是超文本传输协议。每一个网址，都对应了服务器上面的确定的文件。</p>
+<p>纯文本文件：只有内容，没有样式。常见的纯文本文件有：.txt、.html、.js、.css、.java。没有语义，即使你这个文件中的内容排版再清晰，那也是人认为的，实际上纯文本文件中的所有的文字生而平等，没有任何的语义。</p>
+<p>HTML：超文本标记语言，HyperText Markup Language。就是通过标签对儿，给纯文本增加语义。也就是说，用文本给文本增加语义，所以这个叫做“超文本”。而有一对儿对儿标签，也成为“标记”，所以就是“超文本标记语言”。</p>
+<p>标签： 主标题的语义 ，h是英语headline标题的意思。</p>
+<p>HTML中除了语义，其他什么都没有：没有样式、没有交互、没有行为。</p>
+<p>所以HTML不能让文本居中、字号调整、颜色改变、字体、下划线、倾斜……</p>
+<h1 id="二、HTML骨架"><a href="#二、HTML骨架" class="headerlink" title="二、HTML骨架"></a>二、HTML骨架</h1><p>标准的骨架</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1	<span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span><br><span class="line">2	<span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">xml:lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">3	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">4		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html;charset=UTF-8"</span>&gt;</span></span><br><span class="line">5		<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">6	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">7	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">8		</span><br><span class="line">9	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">10	<span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-1-文档声明头"><a href="#2-1-文档声明头" class="headerlink" title="2.1 文档声明头"></a>2.1 文档声明头</h2><p>任何一个标准的HTML页面，第一行一定是一个以&lt;!DOCTYPE开头的语句。这一行，就是文档声明头，DocType Declaration。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。</p>
+<p>到底有哪些规范呢？</p>
+<p>首先我们先确定一件事儿，我们现在学习的是HTML4.01这个版本，这个版本是IE6开始兼容的。HTML5是IE9开开始兼容的。但是IE6、7、8这些浏览器还不能过早的淘汰，所以这几年网页还是应该用HTML4.01来制作。后面将知道手机、移动端的网页，就可以使用HTML5了。</p>
+<p>HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范（见下面）：</p>
+<p>HTML4.01里面规定了普通、XHTML两大种规范。</p>
+<p>HTML觉得自己有一些规定不严谨，比如，标签是否可以用大写字母呢？</p>
+<p>所以，HTML就觉得，把一些规范严格的标准，又制定了一个XHTML1.0。在XHTML中的字母X，表示“严格的”。</p>
+<p>总结一下，</p>
+<p>一共有6种DTD，说白了，HTML第一行语句一共有6种：</p>
+<p><img src="/2018/12/11/HTML详解1/11.jpg" alt="1"></p>
+<h2 id="2-2-字符集"><a href="#2-2-字符集" class="headerlink" title="2.2 字符集"></a>2.2 字符集</h2><p>有两个字库UTF-8和gb2312。</p>
+<p>UTF-8是国际通用字库，里面涵盖了所有地球上所有人类的语言文字，比如阿拉伯文、汉语、鸟语……</p>
+<p>gb2312 是国标，是中国的字库，里面仅涵盖了汉字和一些常用外文，比如日文片假名，和常见的符号。</p>
+<p>字库规模：  UTF-8（字全） &gt; gb2312（只有汉字）</p>
+<p>UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。</p>
+<p>保存大小：   UTF-8（更臃肿、加载更慢） &gt; gb2312 （更小巧，加载更快）</p>
+<p>总结：</p>
+<p>UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；</p>
+<p>gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。</p>
+<p>列出2个使用情形：</p>
+<p>1） 你们公司是做日本动漫的，经常出现一些日语动漫的名字，网页要使用UTF-8。如果用gb2312将无法显示日语。</p>
+<p>2） 你们公司就是中文网页，极度的追求网页的显示速度，要使用gb2312。如果使用UTF-8将每个汉字多一个byte，所以5000个汉字，多5kb。</p>
+<h2 id="2-3-关键字和页面描述"><a href="#2-3-关键字和页面描述" class="headerlink" title="2.3 关键字和页面描述"></a>2.3 关键字和页面描述</h2><p>meta除了可以设置字符集，还可以设置关键字和页面描述。</p>
+<p>设置页面描述：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"Description"</span> <span class="attr">content</span>=<span class="string">"网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO，search engine optimization，搜索引擎优化。<img src="/2018/12/11/HTML详解1/12.png" alt="1"></p>
+<h2 id="2-4-title标签"><a href="#2-4-title标签" class="headerlink" title="2.4 title标签"></a>2.4 title标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1	<span class="tag">&lt;<span class="name">title</span>&gt;</span>网页的标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>title也是有助于SEO搜索引擎优化的：</p>
+<h1 id="三、HTML的基本语法特性"><a href="#三、HTML的基本语法特性" class="headerlink" title="三、HTML的基本语法特性"></a>三、HTML的基本语法特性</h1><h2 id="3-1-HTML对换行不敏感，对tab不敏感"><a href="#3-1-HTML对换行不敏感，对tab不敏感" class="headerlink" title="3.1 HTML对换行不敏感，对tab不敏感"></a>3.1 HTML对换行不敏感，对tab不敏感</h2><p>HTML只在乎标签的嵌套结构，嵌套的关系。谁嵌套了谁，谁被谁嵌套了，和换行、tab无关。</p>
+<p>换不换行、tab不tab，都不影响页面的结构。也就是说，HTML不是依靠缩进来表示嵌套的，就是看标签的包裹关系。但是，我们发现有良好的缩进，代码更易读。要求大家都正确缩进标签。</p>
+<h2 id="3-2-空白折叠现象"><a href="#3-2-空白折叠现象" class="headerlink" title="3.2 空白折叠现象"></a>3.2 空白折叠现象</h2><p>HTML中所有的文字之间，如果有空格、换行、tab都将被折叠为一个空格显示。</p>
+<h2 id="3-3-标签要严格封闭"><a href="#3-3-标签要严格封闭" class="headerlink" title="3.3 标签要严格封闭"></a>3.3 标签要严格封闭</h2><p>标签不封闭是灾难的：</p>
+<h1 id="四、h和p标签"><a href="#四、h和p标签" class="headerlink" title="四、h和p标签"></a>四、h和p标签</h1><p>HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。</p>
+<h1 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h1><p><img src="/2018/12/11/HTML详解1/11.png" alt="2"></p>
+<p>标准答案：<code>&lt;img src=&quot;../../photo/1.png&quot; /&gt;</code></p>
+<p>解释：</p>
+<p>现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。  所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。</p>
 </h6></h5></h4></h3></h2></h1>
       
     </div>
@@ -1105,6 +1172,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
+          
+        </div>
+      
 
       
       
@@ -1114,8 +1187,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/11/HTML详解2/" rel="next" title="HTML详解2">
-                <i class="fa fa-chevron-left"></i> HTML详解2
+              <a href="/2018/12/10/HTTP和AJAX重点知识/" rel="next" title="HTTP和AJAX重点知识">
+                <i class="fa fa-chevron-left"></i> HTTP和AJAX重点知识
               </a>
             
           </div>
@@ -1203,7 +1276,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1585,6 +1658,51 @@ xml:lang=”en”   语言是英语
 第4行， 字符集的配置
 第5行，哈哈哈  网页的标题，可以显示在浏览器的标签栏中。
 第7行，body标签就是网页的内容，用户能够看见。
+一、复习上节课的内容网页的原理：用户输入网址之后，对应的服务器就发现有人请求我的网页了，所以这个服务器就会把网页和相关的图片、js文件、css文件、flash文件都通过HTTP协议传输到用户的电脑里面。HTML页面在用户的电脑里面进行渲染。HTTP协议指的是超文本传输协议。每一个网址，都对应了服务器上面的确定的文件。
+纯文本文件：只有内容，没有样式。常见的纯文本文件有：.txt、.html、.js、.css、.java。没有语义，即使你这个文件中的内容排版再清晰，那也是人认为的，实际上纯文本文件中的所有的文字生而平等，没有任何的语义。
+HTML：超文本标记语言，HyperText Markup Language。就是通过标签对儿，给纯文本增加语义。也就是说，用文本给文本增加语义，所以这个叫做“超文本”。而有一对儿对儿标签，也成为“标记”，所以就是“超文本标记语言”。
+标签： 主标题的语义 ，h是英语headline标题的意思。
+HTML中除了语义，其他什么都没有：没有样式、没有交互、没有行为。
+所以HTML不能让文本居中、字号调整、颜色改变、字体、下划线、倾斜……
+二、HTML骨架标准的骨架
+123456789101	&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;2	&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;3	&lt;head&gt;4		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;5		&lt;title&gt;Document&lt;/title&gt;6	&lt;/head&gt;7	&lt;body&gt;8		9	&lt;/body&gt;10	&lt;/html&gt;
+2.1 文档声明头任何一个标准的HTML页面，第一行一定是一个以&lt;!DOCTYPE开头的语句。这一行，就是文档声明头，DocType Declaration。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。
+到底有哪些规范呢？
+首先我们先确定一件事儿，我们现在学习的是HTML4.01这个版本，这个版本是IE6开始兼容的。HTML5是IE9开开始兼容的。但是IE6、7、8这些浏览器还不能过早的淘汰，所以这几年网页还是应该用HTML4.01来制作。后面将知道手机、移动端的网页，就可以使用HTML5了。
+HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范（见下面）：
+HTML4.01里面规定了普通、XHTML两大种规范。
+HTML觉得自己有一些规定不严谨，比如，标签是否可以用大写字母呢？
+所以，HTML就觉得，把一些规范严格的标准，又制定了一个XHTML1.0。在XHTML中的字母X，表示“严格的”。
+总结一下，
+一共有6种DTD，说白了，HTML第一行语句一共有6种：
+
+2.2 字符集有两个字库UTF-8和gb2312。
+UTF-8是国际通用字库，里面涵盖了所有地球上所有人类的语言文字，比如阿拉伯文、汉语、鸟语……
+gb2312 是国标，是中国的字库，里面仅涵盖了汉字和一些常用外文，比如日文片假名，和常见的符号。
+字库规模：  UTF-8（字全） &gt; gb2312（只有汉字）
+UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。
+保存大小：   UTF-8（更臃肿、加载更慢） &gt; gb2312 （更小巧，加载更快）
+总结：
+UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；
+gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。
+列出2个使用情形：
+1） 你们公司是做日本动漫的，经常出现一些日语动漫的名字，网页要使用UTF-8。如果用gb2312将无法显示日语。
+2） 你们公司就是中文网页，极度的追求网页的显示速度，要使用gb2312。如果使用UTF-8将每个汉字多一个byte，所以5000个汉字，多5kb。
+2.3 关键字和页面描述meta除了可以设置字符集，还可以设置关键字和页面描述。
+设置页面描述：
+11	&lt;meta name=&quot;Description&quot; content=&quot;网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。&quot; /&gt;
+只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO，search engine optimization，搜索引擎优化。
+2.4 title标签11	&lt;title&gt;网页的标题&lt;/title&gt;
+title也是有助于SEO搜索引擎优化的：
+三、HTML的基本语法特性3.1 HTML对换行不敏感，对tab不敏感HTML只在乎标签的嵌套结构，嵌套的关系。谁嵌套了谁，谁被谁嵌套了，和换行、tab无关。
+换不换行、tab不tab，都不影响页面的结构。也就是说，HTML不是依靠缩进来表示嵌套的，就是看标签的包裹关系。但是，我们发现有良好的缩进，代码更易读。要求大家都正确缩进标签。
+3.2 空白折叠现象HTML中所有的文字之间，如果有空格、换行、tab都将被折叠为一个空格显示。
+3.3 标签要严格封闭标签不封闭是灾难的：
+四、h和p标签HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
+五、图片
+标准答案：&lt;img src=&quot;../../photo/1.png&quot; /&gt;
+解释：
+现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。  所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">11.1.</span> <span class="nav-text">   和
 (B) h1到h6 文字从小到大 
 (C) p标签一行只能放一个
@@ -1849,6 +1967,51 @@ xml:lang=”en”   语言是英语
 第4行， 字符集的配置
 第5行，哈哈哈  网页的标题，可以显示在浏览器的标签栏中。
 第7行，body标签就是网页的内容，用户能够看见。
+一、复习上节课的内容网页的原理：用户输入网址之后，对应的服务器就发现有人请求我的网页了，所以这个服务器就会把网页和相关的图片、js文件、css文件、flash文件都通过HTTP协议传输到用户的电脑里面。HTML页面在用户的电脑里面进行渲染。HTTP协议指的是超文本传输协议。每一个网址，都对应了服务器上面的确定的文件。
+纯文本文件：只有内容，没有样式。常见的纯文本文件有：.txt、.html、.js、.css、.java。没有语义，即使你这个文件中的内容排版再清晰，那也是人认为的，实际上纯文本文件中的所有的文字生而平等，没有任何的语义。
+HTML：超文本标记语言，HyperText Markup Language。就是通过标签对儿，给纯文本增加语义。也就是说，用文本给文本增加语义，所以这个叫做“超文本”。而有一对儿对儿标签，也成为“标记”，所以就是“超文本标记语言”。
+标签： 主标题的语义 ，h是英语headline标题的意思。
+HTML中除了语义，其他什么都没有：没有样式、没有交互、没有行为。
+所以HTML不能让文本居中、字号调整、颜色改变、字体、下划线、倾斜……
+二、HTML骨架标准的骨架
+123456789101	&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;2	&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;3	&lt;head&gt;4		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;5		&lt;title&gt;Document&lt;/title&gt;6	&lt;/head&gt;7	&lt;body&gt;8		9	&lt;/body&gt;10	&lt;/html&gt;
+2.1 文档声明头任何一个标准的HTML页面，第一行一定是一个以&lt;!DOCTYPE开头的语句。这一行，就是文档声明头，DocType Declaration。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。
+到底有哪些规范呢？
+首先我们先确定一件事儿，我们现在学习的是HTML4.01这个版本，这个版本是IE6开始兼容的。HTML5是IE9开开始兼容的。但是IE6、7、8这些浏览器还不能过早的淘汰，所以这几年网页还是应该用HTML4.01来制作。后面将知道手机、移动端的网页，就可以使用HTML5了。
+HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范（见下面）：
+HTML4.01里面规定了普通、XHTML两大种规范。
+HTML觉得自己有一些规定不严谨，比如，标签是否可以用大写字母呢？
+所以，HTML就觉得，把一些规范严格的标准，又制定了一个XHTML1.0。在XHTML中的字母X，表示“严格的”。
+总结一下，
+一共有6种DTD，说白了，HTML第一行语句一共有6种：
+
+2.2 字符集有两个字库UTF-8和gb2312。
+UTF-8是国际通用字库，里面涵盖了所有地球上所有人类的语言文字，比如阿拉伯文、汉语、鸟语……
+gb2312 是国标，是中国的字库，里面仅涵盖了汉字和一些常用外文，比如日文片假名，和常见的符号。
+字库规模：  UTF-8（字全） &gt; gb2312（只有汉字）
+UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。
+保存大小：   UTF-8（更臃肿、加载更慢） &gt; gb2312 （更小巧，加载更快）
+总结：
+UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；
+gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。
+列出2个使用情形：
+1） 你们公司是做日本动漫的，经常出现一些日语动漫的名字，网页要使用UTF-8。如果用gb2312将无法显示日语。
+2） 你们公司就是中文网页，极度的追求网页的显示速度，要使用gb2312。如果使用UTF-8将每个汉字多一个byte，所以5000个汉字，多5kb。
+2.3 关键字和页面描述meta除了可以设置字符集，还可以设置关键字和页面描述。
+设置页面描述：
+11	&lt;meta name=&quot;Description&quot; content=&quot;网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。&quot; /&gt;
+只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO，search engine optimization，搜索引擎优化。
+2.4 title标签11	&lt;title&gt;网页的标题&lt;/title&gt;
+title也是有助于SEO搜索引擎优化的：
+三、HTML的基本语法特性3.1 HTML对换行不敏感，对tab不敏感HTML只在乎标签的嵌套结构，嵌套的关系。谁嵌套了谁，谁被谁嵌套了，和换行、tab无关。
+换不换行、tab不tab，都不影响页面的结构。也就是说，HTML不是依靠缩进来表示嵌套的，就是看标签的包裹关系。但是，我们发现有良好的缩进，代码更易读。要求大家都正确缩进标签。
+3.2 空白折叠现象HTML中所有的文字之间，如果有空格、换行、tab都将被折叠为一个空格显示。
+3.3 标签要严格封闭标签不封闭是灾难的：
+四、h和p标签HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
+五、图片
+标准答案：&lt;img src=&quot;../../photo/1.png&quot; /&gt;
+解释：
+现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。  所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">11.1.1.</span> <span class="nav-text">  和
 (B) h1到h6 文字从小到大 
 (C) p标签一行只能放一个
@@ -2113,6 +2276,51 @@ xml:lang=”en”   语言是英语
 第4行， 字符集的配置
 第5行，哈哈哈  网页的标题，可以显示在浏览器的标签栏中。
 第7行，body标签就是网页的内容，用户能够看见。
+一、复习上节课的内容网页的原理：用户输入网址之后，对应的服务器就发现有人请求我的网页了，所以这个服务器就会把网页和相关的图片、js文件、css文件、flash文件都通过HTTP协议传输到用户的电脑里面。HTML页面在用户的电脑里面进行渲染。HTTP协议指的是超文本传输协议。每一个网址，都对应了服务器上面的确定的文件。
+纯文本文件：只有内容，没有样式。常见的纯文本文件有：.txt、.html、.js、.css、.java。没有语义，即使你这个文件中的内容排版再清晰，那也是人认为的，实际上纯文本文件中的所有的文字生而平等，没有任何的语义。
+HTML：超文本标记语言，HyperText Markup Language。就是通过标签对儿，给纯文本增加语义。也就是说，用文本给文本增加语义，所以这个叫做“超文本”。而有一对儿对儿标签，也成为“标记”，所以就是“超文本标记语言”。
+标签： 主标题的语义 ，h是英语headline标题的意思。
+HTML中除了语义，其他什么都没有：没有样式、没有交互、没有行为。
+所以HTML不能让文本居中、字号调整、颜色改变、字体、下划线、倾斜……
+二、HTML骨架标准的骨架
+123456789101	&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;2	&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;3	&lt;head&gt;4		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;5		&lt;title&gt;Document&lt;/title&gt;6	&lt;/head&gt;7	&lt;body&gt;8		9	&lt;/body&gt;10	&lt;/html&gt;
+2.1 文档声明头任何一个标准的HTML页面，第一行一定是一个以&lt;!DOCTYPE开头的语句。这一行，就是文档声明头，DocType Declaration。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。
+到底有哪些规范呢？
+首先我们先确定一件事儿，我们现在学习的是HTML4.01这个版本，这个版本是IE6开始兼容的。HTML5是IE9开开始兼容的。但是IE6、7、8这些浏览器还不能过早的淘汰，所以这几年网页还是应该用HTML4.01来制作。后面将知道手机、移动端的网页，就可以使用HTML5了。
+HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范（见下面）：
+HTML4.01里面规定了普通、XHTML两大种规范。
+HTML觉得自己有一些规定不严谨，比如，标签是否可以用大写字母呢？
+所以，HTML就觉得，把一些规范严格的标准，又制定了一个XHTML1.0。在XHTML中的字母X，表示“严格的”。
+总结一下，
+一共有6种DTD，说白了，HTML第一行语句一共有6种：
+
+2.2 字符集有两个字库UTF-8和gb2312。
+UTF-8是国际通用字库，里面涵盖了所有地球上所有人类的语言文字，比如阿拉伯文、汉语、鸟语……
+gb2312 是国标，是中国的字库，里面仅涵盖了汉字和一些常用外文，比如日文片假名，和常见的符号。
+字库规模：  UTF-8（字全） &gt; gb2312（只有汉字）
+UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。
+保存大小：   UTF-8（更臃肿、加载更慢） &gt; gb2312 （更小巧，加载更快）
+总结：
+UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；
+gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。
+列出2个使用情形：
+1） 你们公司是做日本动漫的，经常出现一些日语动漫的名字，网页要使用UTF-8。如果用gb2312将无法显示日语。
+2） 你们公司就是中文网页，极度的追求网页的显示速度，要使用gb2312。如果使用UTF-8将每个汉字多一个byte，所以5000个汉字，多5kb。
+2.3 关键字和页面描述meta除了可以设置字符集，还可以设置关键字和页面描述。
+设置页面描述：
+11	&lt;meta name=&quot;Description&quot; content=&quot;网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。&quot; /&gt;
+只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO，search engine optimization，搜索引擎优化。
+2.4 title标签11	&lt;title&gt;网页的标题&lt;/title&gt;
+title也是有助于SEO搜索引擎优化的：
+三、HTML的基本语法特性3.1 HTML对换行不敏感，对tab不敏感HTML只在乎标签的嵌套结构，嵌套的关系。谁嵌套了谁，谁被谁嵌套了，和换行、tab无关。
+换不换行、tab不tab，都不影响页面的结构。也就是说，HTML不是依靠缩进来表示嵌套的，就是看标签的包裹关系。但是，我们发现有良好的缩进，代码更易读。要求大家都正确缩进标签。
+3.2 空白折叠现象HTML中所有的文字之间，如果有空格、换行、tab都将被折叠为一个空格显示。
+3.3 标签要严格封闭标签不封闭是灾难的：
+四、h和p标签HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
+五、图片
+标准答案：&lt;img src=&quot;../../photo/1.png&quot; /&gt;
+解释：
+现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。  所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">11.1.1.1.</span> <span class="nav-text"> 和
 (B) h1到h6 文字从小到大 
 (C) p标签一行只能放一个
@@ -2377,6 +2585,51 @@ xml:lang=”en”   语言是英语
 第4行， 字符集的配置
 第5行，哈哈哈  网页的标题，可以显示在浏览器的标签栏中。
 第7行，body标签就是网页的内容，用户能够看见。
+一、复习上节课的内容网页的原理：用户输入网址之后，对应的服务器就发现有人请求我的网页了，所以这个服务器就会把网页和相关的图片、js文件、css文件、flash文件都通过HTTP协议传输到用户的电脑里面。HTML页面在用户的电脑里面进行渲染。HTTP协议指的是超文本传输协议。每一个网址，都对应了服务器上面的确定的文件。
+纯文本文件：只有内容，没有样式。常见的纯文本文件有：.txt、.html、.js、.css、.java。没有语义，即使你这个文件中的内容排版再清晰，那也是人认为的，实际上纯文本文件中的所有的文字生而平等，没有任何的语义。
+HTML：超文本标记语言，HyperText Markup Language。就是通过标签对儿，给纯文本增加语义。也就是说，用文本给文本增加语义，所以这个叫做“超文本”。而有一对儿对儿标签，也成为“标记”，所以就是“超文本标记语言”。
+标签： 主标题的语义 ，h是英语headline标题的意思。
+HTML中除了语义，其他什么都没有：没有样式、没有交互、没有行为。
+所以HTML不能让文本居中、字号调整、颜色改变、字体、下划线、倾斜……
+二、HTML骨架标准的骨架
+123456789101	&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;2	&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;3	&lt;head&gt;4		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;5		&lt;title&gt;Document&lt;/title&gt;6	&lt;/head&gt;7	&lt;body&gt;8		9	&lt;/body&gt;10	&lt;/html&gt;
+2.1 文档声明头任何一个标准的HTML页面，第一行一定是一个以&lt;!DOCTYPE开头的语句。这一行，就是文档声明头，DocType Declaration。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。
+到底有哪些规范呢？
+首先我们先确定一件事儿，我们现在学习的是HTML4.01这个版本，这个版本是IE6开始兼容的。HTML5是IE9开开始兼容的。但是IE6、7、8这些浏览器还不能过早的淘汰，所以这几年网页还是应该用HTML4.01来制作。后面将知道手机、移动端的网页，就可以使用HTML5了。
+HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范（见下面）：
+HTML4.01里面规定了普通、XHTML两大种规范。
+HTML觉得自己有一些规定不严谨，比如，标签是否可以用大写字母呢？
+所以，HTML就觉得，把一些规范严格的标准，又制定了一个XHTML1.0。在XHTML中的字母X，表示“严格的”。
+总结一下，
+一共有6种DTD，说白了，HTML第一行语句一共有6种：
+
+2.2 字符集有两个字库UTF-8和gb2312。
+UTF-8是国际通用字库，里面涵盖了所有地球上所有人类的语言文字，比如阿拉伯文、汉语、鸟语……
+gb2312 是国标，是中国的字库，里面仅涵盖了汉字和一些常用外文，比如日文片假名，和常见的符号。
+字库规模：  UTF-8（字全） &gt; gb2312（只有汉字）
+UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。
+保存大小：   UTF-8（更臃肿、加载更慢） &gt; gb2312 （更小巧，加载更快）
+总结：
+UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；
+gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。
+列出2个使用情形：
+1） 你们公司是做日本动漫的，经常出现一些日语动漫的名字，网页要使用UTF-8。如果用gb2312将无法显示日语。
+2） 你们公司就是中文网页，极度的追求网页的显示速度，要使用gb2312。如果使用UTF-8将每个汉字多一个byte，所以5000个汉字，多5kb。
+2.3 关键字和页面描述meta除了可以设置字符集，还可以设置关键字和页面描述。
+设置页面描述：
+11	&lt;meta name=&quot;Description&quot; content=&quot;网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。&quot; /&gt;
+只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO，search engine optimization，搜索引擎优化。
+2.4 title标签11	&lt;title&gt;网页的标题&lt;/title&gt;
+title也是有助于SEO搜索引擎优化的：
+三、HTML的基本语法特性3.1 HTML对换行不敏感，对tab不敏感HTML只在乎标签的嵌套结构，嵌套的关系。谁嵌套了谁，谁被谁嵌套了，和换行、tab无关。
+换不换行、tab不tab，都不影响页面的结构。也就是说，HTML不是依靠缩进来表示嵌套的，就是看标签的包裹关系。但是，我们发现有良好的缩进，代码更易读。要求大家都正确缩进标签。
+3.2 空白折叠现象HTML中所有的文字之间，如果有空格、换行、tab都将被折叠为一个空格显示。
+3.3 标签要严格封闭标签不封闭是灾难的：
+四、h和p标签HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
+五、图片
+标准答案：&lt;img src=&quot;../../photo/1.png&quot; /&gt;
+解释：
+现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。  所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">11.1.1.1.1.</span> <span class="nav-text">和
 (B) h1到h6 文字从小到大 
 (C) p标签一行只能放一个
@@ -2641,6 +2894,51 @@ xml:lang=”en”   语言是英语
 第4行， 字符集的配置
 第5行，哈哈哈  网页的标题，可以显示在浏览器的标签栏中。
 第7行，body标签就是网页的内容，用户能够看见。
+一、复习上节课的内容网页的原理：用户输入网址之后，对应的服务器就发现有人请求我的网页了，所以这个服务器就会把网页和相关的图片、js文件、css文件、flash文件都通过HTTP协议传输到用户的电脑里面。HTML页面在用户的电脑里面进行渲染。HTTP协议指的是超文本传输协议。每一个网址，都对应了服务器上面的确定的文件。
+纯文本文件：只有内容，没有样式。常见的纯文本文件有：.txt、.html、.js、.css、.java。没有语义，即使你这个文件中的内容排版再清晰，那也是人认为的，实际上纯文本文件中的所有的文字生而平等，没有任何的语义。
+HTML：超文本标记语言，HyperText Markup Language。就是通过标签对儿，给纯文本增加语义。也就是说，用文本给文本增加语义，所以这个叫做“超文本”。而有一对儿对儿标签，也成为“标记”，所以就是“超文本标记语言”。
+标签： 主标题的语义 ，h是英语headline标题的意思。
+HTML中除了语义，其他什么都没有：没有样式、没有交互、没有行为。
+所以HTML不能让文本居中、字号调整、颜色改变、字体、下划线、倾斜……
+二、HTML骨架标准的骨架
+123456789101	&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;2	&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;3	&lt;head&gt;4		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;5		&lt;title&gt;Document&lt;/title&gt;6	&lt;/head&gt;7	&lt;body&gt;8		9	&lt;/body&gt;10	&lt;/html&gt;
+2.1 文档声明头任何一个标准的HTML页面，第一行一定是一个以&lt;!DOCTYPE开头的语句。这一行，就是文档声明头，DocType Declaration。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。
+到底有哪些规范呢？
+首先我们先确定一件事儿，我们现在学习的是HTML4.01这个版本，这个版本是IE6开始兼容的。HTML5是IE9开开始兼容的。但是IE6、7、8这些浏览器还不能过早的淘汰，所以这几年网页还是应该用HTML4.01来制作。后面将知道手机、移动端的网页，就可以使用HTML5了。
+HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范（见下面）：
+HTML4.01里面规定了普通、XHTML两大种规范。
+HTML觉得自己有一些规定不严谨，比如，标签是否可以用大写字母呢？
+所以，HTML就觉得，把一些规范严格的标准，又制定了一个XHTML1.0。在XHTML中的字母X，表示“严格的”。
+总结一下，
+一共有6种DTD，说白了，HTML第一行语句一共有6种：
+
+2.2 字符集有两个字库UTF-8和gb2312。
+UTF-8是国际通用字库，里面涵盖了所有地球上所有人类的语言文字，比如阿拉伯文、汉语、鸟语……
+gb2312 是国标，是中国的字库，里面仅涵盖了汉字和一些常用外文，比如日文片假名，和常见的符号。
+字库规模：  UTF-8（字全） &gt; gb2312（只有汉字）
+UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。
+保存大小：   UTF-8（更臃肿、加载更慢） &gt; gb2312 （更小巧，加载更快）
+总结：
+UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；
+gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。
+列出2个使用情形：
+1） 你们公司是做日本动漫的，经常出现一些日语动漫的名字，网页要使用UTF-8。如果用gb2312将无法显示日语。
+2） 你们公司就是中文网页，极度的追求网页的显示速度，要使用gb2312。如果使用UTF-8将每个汉字多一个byte，所以5000个汉字，多5kb。
+2.3 关键字和页面描述meta除了可以设置字符集，还可以设置关键字和页面描述。
+设置页面描述：
+11	&lt;meta name=&quot;Description&quot; content=&quot;网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。&quot; /&gt;
+只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO，search engine optimization，搜索引擎优化。
+2.4 title标签11	&lt;title&gt;网页的标题&lt;/title&gt;
+title也是有助于SEO搜索引擎优化的：
+三、HTML的基本语法特性3.1 HTML对换行不敏感，对tab不敏感HTML只在乎标签的嵌套结构，嵌套的关系。谁嵌套了谁，谁被谁嵌套了，和换行、tab无关。
+换不换行、tab不tab，都不影响页面的结构。也就是说，HTML不是依靠缩进来表示嵌套的，就是看标签的包裹关系。但是，我们发现有良好的缩进，代码更易读。要求大家都正确缩进标签。
+3.2 空白折叠现象HTML中所有的文字之间，如果有空格、换行、tab都将被折叠为一个空格显示。
+3.3 标签要严格封闭标签不封闭是灾难的：
+四、h和p标签HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
+五、图片
+标准答案：&lt;img src=&quot;../../photo/1.png&quot; /&gt;
+解释：
+现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。  所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
 </span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined"><span class="nav-number">11.1.1.1.1.1.</span> <span class="nav-text">
 (B) h1到h6 文字从小到大 
 (C) p标签一行只能放一个
@@ -2905,7 +3203,52 @@ xml:lang=”en”   语言是英语
 第4行， 字符集的配置
 第5行，哈哈哈  网页的标题，可以显示在浏览器的标签栏中。
 第7行，body标签就是网页的内容，用户能够看见。
-</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#div-span标签-重点"><span class="nav-number">11.1.2.</span> <span class="nav-text">div span标签(重点)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本格式化标签-熟记"><span class="nav-number">11.2.</span> <span class="nav-text">文本格式化标签(熟记)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签属性"><span class="nav-number">11.3.</span> <span class="nav-text">标签属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图像标签img-重点"><span class="nav-number">11.4.</span> <span class="nav-text">图像标签img (重点)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接标签-重点"><span class="nav-number">11.5.</span> <span class="nav-text">链接标签(重点)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锚点定位-（难点）"><span class="nav-number">11.5.1.</span> <span class="nav-text">锚点定位 （难点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#base-标签-基本的"><span class="nav-number">11.5.2.</span> <span class="nav-text">base 标签   基本的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课堂一练-2"><span class="nav-number">11.6.</span> <span class="nav-text">课堂一练</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊字符标签-（理解）"><span class="nav-number">11.7.</span> <span class="nav-text">特殊字符标签 （理解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释标签"><span class="nav-number">11.8.</span> <span class="nav-text">注释标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路径-重点、难点"><span class="nav-number">12.</span> <span class="nav-text">路径(重点、难点)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#相对路径"><span class="nav-number">12.1.</span> <span class="nav-text">相对路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绝对路径"><span class="nav-number">12.2.</span> <span class="nav-text">绝对路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课堂一练-3"><span class="nav-number">12.3.</span> <span class="nav-text">课堂一练</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">13.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表标签"><span class="nav-number">14.</span> <span class="nav-text">列表标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#无序列表-ul-（重点）"><span class="nav-number">14.1.</span> <span class="nav-text">无序列表 ul （重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有序列表-ol-（了解）"><span class="nav-number">14.2.</span> <span class="nav-text">有序列表 ol （了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义列表（理解）"><span class="nav-number">14.3.</span> <span class="nav-text">自定义列表（理解）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表格-table-会使用"><span class="nav-number">15.</span> <span class="nav-text">表格 table(会使用)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建表格"><span class="nav-number">15.1.</span> <span class="nav-text">创建表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格属性"><span class="nav-number">15.2.</span> <span class="nav-text">表格属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表头标签"><span class="nav-number">15.3.</span> <span class="nav-text">表头标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格结构（了解）"><span class="nav-number">15.4.</span> <span class="nav-text">表格结构（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格标题"><span class="nav-number">15.5.</span> <span class="nav-text">表格标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合并单元格-难点"><span class="nav-number">15.6.</span> <span class="nav-text">合并单元格(难点)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结表格"><span class="nav-number">15.7.</span> <span class="nav-text">总结表格</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表单标签-掌握"><span class="nav-number">16.</span> <span class="nav-text">表单标签(掌握)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#input-控件-重点"><span class="nav-number">16.1.</span> <span class="nav-text">input 控件(重点)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#label标签-理解"><span class="nav-number">16.2.</span> <span class="nav-text">label标签(理解)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#textarea控件-文本域"><span class="nav-number">16.3.</span> <span class="nav-text">textarea控件(文本域)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下拉菜单"><span class="nav-number">16.4.</span> <span class="nav-text">下拉菜单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单域"><span class="nav-number">16.5.</span> <span class="nav-text">表单域</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查文档"><span class="nav-number">17.</span> <span class="nav-text">查文档</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、计算机基础知识"><span class="nav-number">18.</span> <span class="nav-text">一、计算机基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-文件和文件夹管理"><span class="nav-number">18.1.</span> <span class="nav-text">1.1 文件和文件夹管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-特殊按键和快捷键"><span class="nav-number">18.2.</span> <span class="nav-text">1.2 特殊按键和快捷键</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、互联网的原理"><span class="nav-number">19.</span> <span class="nav-text">二、互联网的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-上网就是请求数据"><span class="nav-number">19.1.</span> <span class="nav-text">2.1 上网就是请求数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-服务器"><span class="nav-number">19.2.</span> <span class="nav-text">2.2 服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-HTTP"><span class="nav-number">19.3.</span> <span class="nav-text">2.4 HTTP</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、HTML初步认识"><span class="nav-number">20.</span> <span class="nav-text">三、HTML初步认识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-认识什么是纯文本文件txt"><span class="nav-number">20.1.</span> <span class="nav-text">3.1 认识什么是纯文本文件txt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-HTML是负责描述文档语义的语言"><span class="nav-number">20.2.</span> <span class="nav-text">3.2 HTML是负责描述文档语义的语言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">21.</span> <span class="nav-text">  </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">21.1.</span> <span class="nav-text">  </span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、HTML骨架和基本语法"><span class="nav-number">22.</span> <span class="nav-text">五、HTML骨架和基本语法</span></a></li></ol></div>
+一、复习上节课的内容网页的原理：用户输入网址之后，对应的服务器就发现有人请求我的网页了，所以这个服务器就会把网页和相关的图片、js文件、css文件、flash文件都通过HTTP协议传输到用户的电脑里面。HTML页面在用户的电脑里面进行渲染。HTTP协议指的是超文本传输协议。每一个网址，都对应了服务器上面的确定的文件。
+纯文本文件：只有内容，没有样式。常见的纯文本文件有：.txt、.html、.js、.css、.java。没有语义，即使你这个文件中的内容排版再清晰，那也是人认为的，实际上纯文本文件中的所有的文字生而平等，没有任何的语义。
+HTML：超文本标记语言，HyperText Markup Language。就是通过标签对儿，给纯文本增加语义。也就是说，用文本给文本增加语义，所以这个叫做“超文本”。而有一对儿对儿标签，也成为“标记”，所以就是“超文本标记语言”。
+标签： 主标题的语义 ，h是英语headline标题的意思。
+HTML中除了语义，其他什么都没有：没有样式、没有交互、没有行为。
+所以HTML不能让文本居中、字号调整、颜色改变、字体、下划线、倾斜……
+二、HTML骨架标准的骨架
+123456789101	&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;2	&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;3	&lt;head&gt;4		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;5		&lt;title&gt;Document&lt;/title&gt;6	&lt;/head&gt;7	&lt;body&gt;8		9	&lt;/body&gt;10	&lt;/html&gt;
+2.1 文档声明头任何一个标准的HTML页面，第一行一定是一个以&lt;!DOCTYPE开头的语句。这一行，就是文档声明头，DocType Declaration。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。
+到底有哪些规范呢？
+首先我们先确定一件事儿，我们现在学习的是HTML4.01这个版本，这个版本是IE6开始兼容的。HTML5是IE9开开始兼容的。但是IE6、7、8这些浏览器还不能过早的淘汰，所以这几年网页还是应该用HTML4.01来制作。后面将知道手机、移动端的网页，就可以使用HTML5了。
+HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范（见下面）：
+HTML4.01里面规定了普通、XHTML两大种规范。
+HTML觉得自己有一些规定不严谨，比如，标签是否可以用大写字母呢？
+所以，HTML就觉得，把一些规范严格的标准，又制定了一个XHTML1.0。在XHTML中的字母X，表示“严格的”。
+总结一下，
+一共有6种DTD，说白了，HTML第一行语句一共有6种：
+
+2.2 字符集有两个字库UTF-8和gb2312。
+UTF-8是国际通用字库，里面涵盖了所有地球上所有人类的语言文字，比如阿拉伯文、汉语、鸟语……
+gb2312 是国标，是中国的字库，里面仅涵盖了汉字和一些常用外文，比如日文片假名，和常见的符号。
+字库规模：  UTF-8（字全） &gt; gb2312（只有汉字）
+UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。
+保存大小：   UTF-8（更臃肿、加载更慢） &gt; gb2312 （更小巧，加载更快）
+总结：
+UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；
+gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。
+列出2个使用情形：
+1） 你们公司是做日本动漫的，经常出现一些日语动漫的名字，网页要使用UTF-8。如果用gb2312将无法显示日语。
+2） 你们公司就是中文网页，极度的追求网页的显示速度，要使用gb2312。如果使用UTF-8将每个汉字多一个byte，所以5000个汉字，多5kb。
+2.3 关键字和页面描述meta除了可以设置字符集，还可以设置关键字和页面描述。
+设置页面描述：
+11	&lt;meta name=&quot;Description&quot; content=&quot;网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。&quot; /&gt;
+只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO，search engine optimization，搜索引擎优化。
+2.4 title标签11	&lt;title&gt;网页的标题&lt;/title&gt;
+title也是有助于SEO搜索引擎优化的：
+三、HTML的基本语法特性3.1 HTML对换行不敏感，对tab不敏感HTML只在乎标签的嵌套结构，嵌套的关系。谁嵌套了谁，谁被谁嵌套了，和换行、tab无关。
+换不换行、tab不tab，都不影响页面的结构。也就是说，HTML不是依靠缩进来表示嵌套的，就是看标签的包裹关系。但是，我们发现有良好的缩进，代码更易读。要求大家都正确缩进标签。
+3.2 空白折叠现象HTML中所有的文字之间，如果有空格、换行、tab都将被折叠为一个空格显示。
+3.3 标签要严格封闭标签不封闭是灾难的：
+四、h和p标签HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
+五、图片
+标准答案：&lt;img src=&quot;../../photo/1.png&quot; /&gt;
+解释：
+现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。  所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
+</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#div-span标签-重点"><span class="nav-number">11.1.2.</span> <span class="nav-text">div span标签(重点)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本格式化标签-熟记"><span class="nav-number">11.2.</span> <span class="nav-text">文本格式化标签(熟记)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签属性"><span class="nav-number">11.3.</span> <span class="nav-text">标签属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图像标签img-重点"><span class="nav-number">11.4.</span> <span class="nav-text">图像标签img (重点)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接标签-重点"><span class="nav-number">11.5.</span> <span class="nav-text">链接标签(重点)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锚点定位-（难点）"><span class="nav-number">11.5.1.</span> <span class="nav-text">锚点定位 （难点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#base-标签-基本的"><span class="nav-number">11.5.2.</span> <span class="nav-text">base 标签   基本的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课堂一练-2"><span class="nav-number">11.6.</span> <span class="nav-text">课堂一练</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊字符标签-（理解）"><span class="nav-number">11.7.</span> <span class="nav-text">特殊字符标签 （理解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释标签"><span class="nav-number">11.8.</span> <span class="nav-text">注释标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路径-重点、难点"><span class="nav-number">12.</span> <span class="nav-text">路径(重点、难点)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#相对路径"><span class="nav-number">12.1.</span> <span class="nav-text">相对路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绝对路径"><span class="nav-number">12.2.</span> <span class="nav-text">绝对路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课堂一练-3"><span class="nav-number">12.3.</span> <span class="nav-text">课堂一练</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">13.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表标签"><span class="nav-number">14.</span> <span class="nav-text">列表标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#无序列表-ul-（重点）"><span class="nav-number">14.1.</span> <span class="nav-text">无序列表 ul （重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有序列表-ol-（了解）"><span class="nav-number">14.2.</span> <span class="nav-text">有序列表 ol （了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义列表（理解）"><span class="nav-number">14.3.</span> <span class="nav-text">自定义列表（理解）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表格-table-会使用"><span class="nav-number">15.</span> <span class="nav-text">表格 table(会使用)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建表格"><span class="nav-number">15.1.</span> <span class="nav-text">创建表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格属性"><span class="nav-number">15.2.</span> <span class="nav-text">表格属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表头标签"><span class="nav-number">15.3.</span> <span class="nav-text">表头标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格结构（了解）"><span class="nav-number">15.4.</span> <span class="nav-text">表格结构（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格标题"><span class="nav-number">15.5.</span> <span class="nav-text">表格标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合并单元格-难点"><span class="nav-number">15.6.</span> <span class="nav-text">合并单元格(难点)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结表格"><span class="nav-number">15.7.</span> <span class="nav-text">总结表格</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表单标签-掌握"><span class="nav-number">16.</span> <span class="nav-text">表单标签(掌握)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#input-控件-重点"><span class="nav-number">16.1.</span> <span class="nav-text">input 控件(重点)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#label标签-理解"><span class="nav-number">16.2.</span> <span class="nav-text">label标签(理解)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#textarea控件-文本域"><span class="nav-number">16.3.</span> <span class="nav-text">textarea控件(文本域)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下拉菜单"><span class="nav-number">16.4.</span> <span class="nav-text">下拉菜单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单域"><span class="nav-number">16.5.</span> <span class="nav-text">表单域</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查文档"><span class="nav-number">17.</span> <span class="nav-text">查文档</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、计算机基础知识"><span class="nav-number">18.</span> <span class="nav-text">一、计算机基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-文件和文件夹管理"><span class="nav-number">18.1.</span> <span class="nav-text">1.1 文件和文件夹管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-特殊按键和快捷键"><span class="nav-number">18.2.</span> <span class="nav-text">1.2 特殊按键和快捷键</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、互联网的原理"><span class="nav-number">19.</span> <span class="nav-text">二、互联网的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-上网就是请求数据"><span class="nav-number">19.1.</span> <span class="nav-text">2.1 上网就是请求数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-服务器"><span class="nav-number">19.2.</span> <span class="nav-text">2.2 服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-HTTP"><span class="nav-number">19.3.</span> <span class="nav-text">2.4 HTTP</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、HTML初步认识"><span class="nav-number">20.</span> <span class="nav-text">三、HTML初步认识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-认识什么是纯文本文件txt"><span class="nav-number">20.1.</span> <span class="nav-text">3.1 认识什么是纯文本文件txt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-HTML是负责描述文档语义的语言"><span class="nav-number">20.2.</span> <span class="nav-text">3.2 HTML是负责描述文档语义的语言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">21.</span> <span class="nav-text">  </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">21.1.</span> <span class="nav-text">  </span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、HTML骨架和基本语法"><span class="nav-number">22.</span> <span class="nav-text">五、HTML骨架和基本语法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、复习上节课的内容"><span class="nav-number">23.</span> <span class="nav-text">一、复习上节课的内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、HTML骨架"><span class="nav-number">24.</span> <span class="nav-text">二、HTML骨架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-文档声明头"><span class="nav-number">24.1.</span> <span class="nav-text">2.1 文档声明头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-字符集"><span class="nav-number">24.2.</span> <span class="nav-text">2.2 字符集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-关键字和页面描述"><span class="nav-number">24.3.</span> <span class="nav-text">2.3 关键字和页面描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-title标签"><span class="nav-number">24.4.</span> <span class="nav-text">2.4 title标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、HTML的基本语法特性"><span class="nav-number">25.</span> <span class="nav-text">三、HTML的基本语法特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-HTML对换行不敏感，对tab不敏感"><span class="nav-number">25.1.</span> <span class="nav-text">3.1 HTML对换行不敏感，对tab不敏感</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-空白折叠现象"><span class="nav-number">25.2.</span> <span class="nav-text">3.2 空白折叠现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-标签要严格封闭"><span class="nav-number">25.3.</span> <span class="nav-text">3.3 标签要严格封闭</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、h和p标签"><span class="nav-number">26.</span> <span class="nav-text">四、h和p标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、图片"><span class="nav-number">27.</span> <span class="nav-text">五、图片</span></a></li></ol></div>
             
 
           </div>
