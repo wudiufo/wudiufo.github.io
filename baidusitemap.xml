@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://wudiufo.github.io/2018/12/11/HTML%E8%AF%A6%E8%A7%A31/</loc>
+    <lastmod>2018-12-11T12:43:31.134Z</lastmod>
+  </url>  <url>
+    <loc>http://wudiufo.github.io/2018/12/10/HTTP%E5%92%8CAJAX%E9%87%8D%E7%82%B9%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2018-12-11T12:19:34.097Z</lastmod>
+  </url>  <url>
     <loc>http://wudiufo.github.io/2018/12/09/react-redux%E5%92%8Credux/</loc>
-    <lastmod>2018-12-09T16:18:37.995Z</lastmod>
+    <lastmod>2018-12-10T11:07:54.948Z</lastmod>
   </url>  <url>
     <loc>http://wudiufo.github.io/2018/12/04/Git%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2018-12-09T09:10:01.365Z</lastmod>
