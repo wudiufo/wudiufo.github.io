@@ -128,18 +128,21 @@
   </script>
 
 
-  <meta name="description" content="AJAX基础知识及核心原理解读">
+  <meta name="description" content="AJAX基础知识及核心原理解读AJAX基础知识 什么是AJAX？ async javascript and xml  异步的JS和XML  XML：可扩展的标记语言 作用：是用来存储数据的（通过自己扩展的标记名称清晰地展示出数据结构） ajax之所以称为异步的js和xml，主要原因是：以前最开始使用ajax实现客户端和服务端数据通信的时候，传输数据的格式一般都是xml格式的数据，我们把他称之为异步">
 <meta name="keywords" content="HTTP和AJAX重点知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="什么是AJAX（前后端分离和不分离的优势弊端）">
 <meta property="og:url" content="http://wudiufo.github.io/2018/12/12/什么是AJAX（前后端分离和不分离的优势弊端）/index.html">
 <meta property="og:site_name" content="Haiyang">
-<meta property="og:description" content="AJAX基础知识及核心原理解读">
+<meta property="og:description" content="AJAX基础知识及核心原理解读AJAX基础知识 什么是AJAX？ async javascript and xml  异步的JS和XML  XML：可扩展的标记语言 作用：是用来存储数据的（通过自己扩展的标记名称清晰地展示出数据结构） ajax之所以称为异步的js和xml，主要原因是：以前最开始使用ajax实现客户端和服务端数据通信的时候，传输数据的格式一般都是xml格式的数据，我们把他称之为异步">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-12T08:40:13.038Z">
+<meta property="og:image" content="http://wudiufo.github.io/2018/12/12/什么是AJAX（前后端分离和不分离的优势弊端）/haiyangblog/source/_posts/什么是AJAX(前后端分离和不分离的优势弊端">
+<meta property="og:image" content="http://wudiufo.github.io/2018/12/12/什么是AJAX（前后端分离和不分离的优势弊端）/haiyangblog/source/_posts/什么是AJAX(前后端分离和不分离的优势弊端">
+<meta property="og:updated_time" content="2018-12-12T11:56:04.170Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是AJAX（前后端分离和不分离的优势弊端）">
-<meta name="twitter:description" content="AJAX基础知识及核心原理解读">
+<meta name="twitter:description" content="AJAX基础知识及核心原理解读AJAX基础知识 什么是AJAX？ async javascript and xml  异步的JS和XML  XML：可扩展的标记语言 作用：是用来存储数据的（通过自己扩展的标记名称清晰地展示出数据结构） ajax之所以称为异步的js和xml，主要原因是：以前最开始使用ajax实现客户端和服务端数据通信的时候，传输数据的格式一般都是xml格式的数据，我们把他称之为异步">
+<meta name="twitter:image" content="http://wudiufo.github.io/2018/12/12/什么是AJAX（前后端分离和不分离的优势弊端）/haiyangblog/source/_posts/什么是AJAX(前后端分离和不分离的优势弊端">
 
 
 
@@ -222,6 +225,10 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">前端全栈，python全栈，人工智能，大数据，网络攻防</h1>
+      
     
   </div>
 
@@ -452,7 +459,7 @@
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Haiyang">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="前端全栈，python全栈，人工智能，大数据，网络攻防">
       <meta itemprop="image" content="/images/cat.jpg">
     </span>
 
@@ -490,7 +497,7 @@
                 
               
 
-              <time title="创建时间：2018-12-12 16:14:26 / 修改时间：16:40:13" itemprop="dateCreated datePublished" datetime="2018-12-12T16:14:26+08:00">2018-12-12</time>
+              <time title="创建时间：2018-12-12 16:14:26 / 修改时间：19:56:04" itemprop="dateCreated datePublished" datetime="2018-12-12T16:14:26+08:00">2018-12-12</time>
             
 
             
@@ -547,7 +554,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">15</span>
+                <span title="本文字数">800</span>
               
 
               
@@ -581,7 +588,25 @@
       
 
       
-        <h2 id="AJAX基础知识及核心原理解读"><a href="#AJAX基础知识及核心原理解读" class="headerlink" title="AJAX基础知识及核心原理解读"></a>AJAX基础知识及核心原理解读</h2>
+        <h2 id="AJAX基础知识及核心原理解读"><a href="#AJAX基础知识及核心原理解读" class="headerlink" title="AJAX基础知识及核心原理解读"></a>AJAX基础知识及核心原理解读</h2><h3 id="AJAX基础知识"><a href="#AJAX基础知识" class="headerlink" title="AJAX基础知识"></a>AJAX基础知识</h3><blockquote>
+<p>什么是AJAX？</p>
+<p>async javascript and xml  异步的JS和XML</p>
+</blockquote>
+<h4 id="XML：可扩展的标记语言"><a href="#XML：可扩展的标记语言" class="headerlink" title="XML：可扩展的标记语言"></a><strong>XML：可扩展的标记语言</strong></h4><blockquote>
+<p>作用：是用来存储数据的（通过自己扩展的标记名称清晰地展示出数据结构）</p>
+<p>ajax之所以称为异步的js和xml，主要原因是：以前最开始使用ajax实现客户端和服务端数据通信的时候，传输数据的格式一般都是xml格式的数据，我们把他称之为异步的js和xml（现在一般都是基于JSON格式来进行数据传输的）</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">root</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>海洋<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>10<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">score</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deutsch</span>&gt;</span>100<span class="tag">&lt;/<span class="name">deutsch</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">IT</span>&gt;</span>100<span class="tag">&lt;/<span class="name">IT</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">english</span>&gt;</span>100<span class="tag">&lt;/<span class="name">english</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">score</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="异步的JS"><a href="#异步的JS" class="headerlink" title="异步的JS"></a><strong>异步的JS</strong></h4><blockquote>
+<p>这里的异步不是说ajax只能基于异步进行请求（虽然建议都是使用异步编程），这里的异步特指的是 局部刷新</p>
+</blockquote>
+<h5 id="局部刷新-VS-全局刷新"><a href="#局部刷新-VS-全局刷新" class="headerlink" title="局部刷新 VS 全局刷新"></a><strong>局部刷新 VS 全局刷新</strong></h5><blockquote>
+<p><strong>全局刷新</strong>：</p>
+<p>在非完全前后端分离的项目中，前端开发只需要完成页面的制作，并且把一些基础的人机交互效果使用js完成即可，页面中需要动态呈现内容的部分，都是交给后台开发工程师做数据绑定和基于服务器进行渲染的</p>
+<p><img src="/2018/12/12/什么是AJAX（前后端分离和不分离的优势弊端）/haiyangblog\source\_posts\什么是AJAX(前后端分离和不分离的优势弊端" alt="">\非完全前后端分离.jpg)</p>
+</blockquote>
+<p><img src="/2018/12/12/什么是AJAX（前后端分离和不分离的优势弊端）/haiyangblog\source\_posts\什么是AJAX(前后端分离和不分离的优势弊端" alt="不完全前后端分离">\不完全前后端分离.jpg)</p>
+
       
     </div>
 
@@ -732,7 +757,7 @@
               <img class="site-author-image" itemprop="image" src="/images/cat.jpg" alt="Haiyang">
             
               <p class="site-author-name" itemprop="name">Haiyang</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">前端全栈，python全栈，人工智能，大数据，网络攻防</p>
           </div>
 
           
@@ -864,7 +889,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX基础知识及核心原理解读"><span class="nav-number">1.</span> <span class="nav-text">AJAX基础知识及核心原理解读</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX基础知识及核心原理解读"><span class="nav-number">1.</span> <span class="nav-text">AJAX基础知识及核心原理解读</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AJAX基础知识"><span class="nav-number">1.1.</span> <span class="nav-text">AJAX基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XML：可扩展的标记语言"><span class="nav-number">1.1.1.</span> <span class="nav-text">XML：可扩展的标记语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异步的JS"><span class="nav-number">1.1.2.</span> <span class="nav-text">异步的JS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#局部刷新-VS-全局刷新"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">局部刷新 VS 全局刷新</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -903,7 +928,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">78k</span>
+    <span title="站点总字数">79k</span>
   
 
   
@@ -912,7 +937,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:12</span>
   
 </div>
 
