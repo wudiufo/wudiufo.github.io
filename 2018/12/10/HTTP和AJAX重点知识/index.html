@@ -131,16 +131,16 @@
   <meta name="description" content="成为栈开发工程师需要掌握的技术栈如何成为一名初级全栈开发工程师什么是全栈开发工程师？ 全栈（全站）开发工程师(FULL-STACK)：前后端都可以自己独立完成开发 [前端] HTML（5）+ CSS（3） JAVASCRIPT（JQ，VUE，REACT） [后端] Java (JSP) Python Node PHP C#（.net-&amp;gt;dot net） (ASP.NET) C … [数据库]">
 <meta name="keywords" content="HTTP和AJAX重点知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP和AJAX重点知识">
+<meta property="og:title" content="HTTP等传输协议讲解">
 <meta property="og:url" content="http://wudiufo.github.io/2018/12/10/HTTP和AJAX重点知识/index.html">
 <meta property="og:site_name" content="Haiyang">
 <meta property="og:description" content="成为栈开发工程师需要掌握的技术栈如何成为一名初级全栈开发工程师什么是全栈开发工程师？ 全栈（全站）开发工程师(FULL-STACK)：前后端都可以自己独立完成开发 [前端] HTML（5）+ CSS（3） JAVASCRIPT（JQ，VUE，REACT） [后端] Java (JSP) Python Node PHP C#（.net-&amp;gt;dot net） (ASP.NET) C … [数据库]">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://wudiufo.github.io/2018/12/10/HTTP和AJAX重点知识/1.png">
 <meta property="og:image" content="http://wudiufo.github.io/2018/12/10/HTTP和AJAX重点知识/2.png">
-<meta property="og:updated_time" content="2018-12-11T12:19:34.097Z">
+<meta property="og:updated_time" content="2018-12-12T08:19:49.787Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP和AJAX重点知识">
+<meta name="twitter:title" content="HTTP等传输协议讲解">
 <meta name="twitter:description" content="成为栈开发工程师需要掌握的技术栈如何成为一名初级全栈开发工程师什么是全栈开发工程师？ 全栈（全站）开发工程师(FULL-STACK)：前后端都可以自己独立完成开发 [前端] HTML（5）+ CSS（3） JAVASCRIPT（JQ，VUE，REACT） [后端] Java (JSP) Python Node PHP C#（.net-&amp;gt;dot net） (ASP.NET) C … [数据库]">
 <meta name="twitter:image" content="http://wudiufo.github.io/2018/12/10/HTTP和AJAX重点知识/1.png">
 
@@ -161,7 +161,7 @@
   };
 </script>
 
-  <title>HTTP和AJAX重点知识 | Haiyang</title>
+  <title>HTTP等传输协议讲解 | Haiyang</title>
   
 
 
@@ -468,7 +468,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">HTTP和AJAX重点知识
+          <h2 class="post-title" itemprop="name headline">HTTP等传输协议讲解
               
             
           </h2>
@@ -510,7 +510,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-11 20:19:34" itemprop="dateModified" datetime="2018-12-11T20:19:34+08:00">2018-12-11</time>
+                <time title="修改时间：2018-12-12 16:19:49" itemprop="dateModified" datetime="2018-12-12T16:19:49+08:00">2018-12-12</time>
               
             
           </span>
@@ -562,7 +562,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.8k</span>
+                <span title="本文字数">4.2k</span>
               
 
               
@@ -576,7 +576,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">5 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -757,157 +757,82 @@
 </blockquote>
 <p><strong>第二部分：域名</strong></p>
 <blockquote>
+<p>设置域名其实就是给不好记忆的服务器外网ip设置了一个好记的名字</p>
+<p>一级域名（顶级域名）：qq.com</p>
+<p>二级域名：<a href="http://www.qq.com，sports.qq.com，。。。" target="_blank" rel="noopener">www.qq.com，sports.qq.com，。。。</a></p>
+<p>三级域名：kkk.sports.qq.com</p>
 </blockquote>
-<h1 id="前端开发优化的一些常见办法-汇总"><a href="#前端开发优化的一些常见办法-汇总" class="headerlink" title="前端开发优化的一些常见办法(汇总)"></a>前端开发优化的一些常见办法(汇总)</h1><h2 id="WEB前端开发常用的优化技巧汇总"><a href="#WEB前端开发常用的优化技巧汇总" class="headerlink" title="WEB前端开发常用的优化技巧汇总"></a>WEB前端开发常用的优化技巧汇总</h2><h3 id="减少HTTP请求的次数或者减小请求数据的大小"><a href="#减少HTTP请求的次数或者减小请求数据的大小" class="headerlink" title="减少HTTP请求的次数或者减小请求数据的大小"></a>减少HTTP请求的次数或者减小请求数据的大小</h3><blockquote>
-<p>页面中每发送一次HTTP请求，都需要完成请求加响应这个完整的HTTP事务，会消耗一些时间，也可能会导致HTTP链接通道的阻塞，为了提高页面的加载速度和运行的性能，我们应该减少HTTP的请求次数和减少请求内容的大小（请求的内容越大，消耗的时间越长）。</p>
+<p><strong>第三部分：端口号</strong></p>
+<blockquote>
+<p>在服务器发布项目的时候，我们可以通过端口号区分当前服务器上的不同项目</p>
+<p>一台服务器的端口号取值范围：0-65535之间，如果电脑上安装了许多程序，有一些端口号就是被占用了</p>
+<blockquote>
+<p>  一个IP地址的端口可以有65536（2^16）个，端口号只有整数，范围是从0 到65535（2^16-1）。</p>
+<p>端口有三个类型：</p>
+<p>\1. 公认端口（Well Known Ports）是众所周知的端口号，范围从0到1023。</p>
+<p>\2. 动态端口（Dynamic Ports）范围是从49152到65535。之所以称为动态端口，是因为它 一般不固定分配某种服务，而是动态分配。</p>
+<p>\3. 注册端口（RegisteredPorts）范围是从1024到49151，分配给用户进程或应用程序。这些进程主要是用户选择安装的一些应用程序，而不是已经分配好了公认端口的常用程序。这些端口在没有被服务器资源占用的时候，可以用用户端动态选用为源端口。  </p>
 </blockquote>
+<p>HTTP: 默认端口号80</p>
+<p>HTTPS：默认端口号443</p>
+<p>FTP：默认端口号21</p>
+<p>对于上述三个端口号其实是很重要的，如果被其他程序占用，我们就不能使用了，所以在服务器上一般是禁止安装其他程序的</p>
+</blockquote>
+<p><strong>第四部分：请求资源的文件路径名称</strong></p>
+<blockquote>
+<p>/boos/index.html</p>
+<p>在服务器中发布项目的时候，我们一般都会配置一些默认文档，用户即使不输入请求文件的名称，服务器也会找到默认文档（一般默认文档都是 index/default …）</p>
+<p>我们通常为了做SEO优化，会把一些动态页面的地址（xxx.py，xxx.jsp，xxx.php …）进行伪URL重写（需要服务器处理的）</p>
+<p>例如：<code>https://item.jd.com/342535.html</code></p>
+<blockquote>
+<p>不可能 有一个商品就写一个详情页，肯定是同一个详情页做不同的处理</p>
 <ol>
-<li><p>采用CSS雪碧图（CSS Sprit/CSS 图片精灵）技术，把一些小图合并在一张大图上，使用的时候通过背景图片定位，定位在具体的某一张小图上</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.pubBg</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'../img/sprit.png'</span>) no-repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: x y; <span class="comment">/*和图片的大小保持一致*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">background-position</span>: x y; <span class="comment">/*通过背景定位，定位到具体的位置，展示不同的图片即可*/</span></span><br><span class="line">&#125;</span><br><span class="line">&lt;div class="pubBg box"&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<li><p>第一种方案：</p>
+<p>由后台语言根据详情页模板动态生成具体的详情页面</p>
 </li>
-<li><p>真实项目中，我们最好把CSS或者JS文件进行合并压缩。尤其是在移动端开发的时候，如果css或者js内容不是很多，我们可以采取内嵌式，以此减少HTTP请求的次数，加快页面的加载速度</p>
+<li><p>第二种方案：</p>
+<p>当前页面就是一个页面，例如：detail.html/detail.php，我们做详情页面的时候，开发是按照detail.html?id=787878来开发的。但是这种页面不方便做SEO优化，此时我们把真实的地址进行重写，重写为我们看到的787878.html</p>
+</li>
+</ol>
+</blockquote>
+</blockquote>
+<p><strong>第五部分：问号传参</strong></p>
 <blockquote>
+<p>?name=hy&amp;age=6</p>
+<p>把一些值通过xxx=xxx的方式，放在一个URL的末尾，通过？传递参数</p>
+<p>【作用】</p>
 <ol>
-<li>CSS合并成一个，JS最好也合并成一个</li>
-<li>首先通过一些工具（例如：webpack）把合并后的CSS或者JS压缩成xxx.min.js，减少文件的大小</li>
-<li>服务器端开启资源文件的GZIP压缩<ul>
-<li>通过一些自动化工具完成CSS以及JS的合并压缩，或者在完成LESS转CSS，ES6转ES5等操作，我们把这种自动化构建模式，称之为前端工程化开发</li>
-</ul>
-</li>
+<li>在AJAX请求中，我们可以通过问号传递参数的方式，客户端把一些信息传递给服务器，服务器根据传递信息的不一样，返回不同的数据</li>
 </ol>
 </blockquote>
-</li>
-<li><p>采用图片的懒加载技术，在页面开始加载的时候，不请求真实图片的地址，而是用默认图占位，当页面加载完成后，再根据相关的条件依次加载真实图片（减少页面首次加载HTTP请求的次数）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// $.ajax(url,&#123;&#125;);</span></span><br><span class="line"><span class="comment">// $.get(url,function()&#123;&#125;);对于AJAX请求的特殊写法，原理还是基于AJAX方法实现的  $.post / $.script</span></span><br><span class="line"></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: <span class="string">'getPersonInfo?id=11'</span></span><br><span class="line">    ...</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当前案例，我们传递给服务器的编号是多少，服务器就会把对应编号的人员返回</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>真实项目中，我们开始图片都不加载，页面首次加载完成，先把第一屏幕中可以看见的图片进行加载，随着页面的滚动，再把下面区域中能够呈现出来的图片进行加载</p>
-<p>根据图片的懒加载技术，我们还可以扩充出<code>数据的懒加载</code></p>
+<ol start="2">
+<li>消除AJAX请求中GET方式缓存</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    url: <span class="string">'xxx?_=0.3434'</span>,</span><br><span class="line">    method: <span class="string">'get'</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 我们会在请求URL末尾追加一个随机数 _=随机数，保证每一次请求的URL地址都是不一样的，以此来消除GET请求遗留的缓存问题</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="3">
+<li>通过URL传递参数的方式，可以实现页面之间信息的通信，例如：我们有两个页面A/B，A是列表页面，B是详情页面，点击A中的某一条信息，进入到唯一的详情页B，如何展示不同的信息，这种操作就可以基于URL问号传递参数来实现</li>
+</ol>
+<p>例如：</p>
+<p><a href="http://sports.qq.com/kbsweb/game.html?mid=10000:123" target="_blank" rel="noopener">http://sports.qq.com/kbsweb/game.html?mid=10000:123</a></p>
+<p><a href="http://sports.qq.com/kbsweb/game.html?mid=10000:125" target="_blank" rel="noopener">http://sports.qq.com/kbsweb/game.html?mid=10000:125</a></p>
+<p>在进入到game.html页面的时候，我们可以获取URL传递的参数值，根据传递参数值的不一样，从服务器端获取不同的数据展示</p>
+<p>在列表页面进行页面跳转的时候，我们需要记住的是跳转的同时传递不同的参数值</p>
+<p><code>&lt;a href=&#39;game.html?mid=xxx&#39;</code></p>
+</blockquote>
+<p><strong>第六部分：HASH值</strong></p>
+<blockquote>
+<p>/#xxx</p>
+<p>URL末尾传递的#号就是HASH值（）哈希值</p>
+<p>【作用】</p>
 <ol>
-<li>开始加载页面的时候，我们只把首屏或者前两屏的数据从服务端进行请求（有些网站首屏数据是后台渲染好，整体返回给客户端呈现的）</li>
-<li>当页面下拉，滚动到哪个区域，在把这个区域需要的数据进行请求（用请求回来的数据进行数据的绑定以及图片的延迟加载等）</li>
-<li>分页展示技术采用的也是数据的懒加载思想实现的：如果我们请求获取很多的数据，我们最好分批请求，开始只请求第一页的数据，当用户点击第二页（微博是下拉到一定距离后，在请求第二页数据…）的时候在请求第二页的数据</li>
+<li>页面中锚点定位</li>
+<li>前端路由（SPA 单页面开发）</li>
 </ol>
 </blockquote>
-</li>
-<li><p>对于不经常更新的数据，最好采用浏览器的304缓存做处理（主要由服务器端处理）</p>
-<blockquote>
-<p>例如:</p>
-<p>第一次请求CSS和JS下来，浏览器会把请求的内容缓存起来，如果做了304处理，用户再次请求CSS和JS，直接从缓存中读取，不需要再去服务器获取了（减少了HTTP请求的次数）</p>
-<p>当用户强制刷新页面（CTRL+F5）或者当前缓存的CSS或者JS发生了变动，都会重新从服务器端拉取</p>
-<p>…</p>
-<p>对于客户端来讲，我们还可以基于localStorage来做一些本地存储，例如：第一次请求的数据或者不经常更新的CSS和JS，我们都可以把内容存储到本地，下一次页面的加载，我们从本地获取即可，我们设定一定的期限或者一些标识，可以控制在某个阶段重新从服务器获取</p>
-</blockquote>
-</li>
-<li><p>使用字体图标代替页面中的一些位图（图片），这样不仅做适配的时候方便，而且更加轻量级，而且减少了HTTP请求次数（类似于雪碧图）</p>
-</li>
-<li><p>如果当前页面中出现了Audio或者Video标签，我们最好设置他们的<code>preload=none</code>；当页面加载的时候，音视频资源不进行加载，播放的时候在进行加载（减少页面首次加载HTTP请求的次数）</p>
-<blockquote>
-<p>preload=auto；页面首次加载的时候就把音视频进行加载了</p>
-<p>preload=metadata；页面首次加载的时候只把音视频资源的头部信息进行加载</p>
-</blockquote>
-</li>
-<li><p>在客户端和服务器端进行数据通信的时候，我们尽量采用JSON格式进行数据传输</p>
-</li>
-</ol>
-<blockquote>
-<p>[优势]</p>
-<ol>
-<li>JSON格式的数据，能够清晰明了的展示出数据结构，而且也方便我们获取和操作</li>
-<li>相对于很早以前的XML传输，JSON格式的数据更加轻量级</li>
-<li>客户端和服务器端都支持JSON数据的处理，处理起来非常的方便</li>
-</ol>
-<p>在真实项目中，并不是所有的数据都要基于JSON，我们尽可能这样做，但是对于某些特殊需求（例如：文件流的传输或者文档传输），使用JSON就不合适了</p>
-</blockquote>
-<ol start="8">
-<li><p>采用CDN加速</p>
-<blockquote>
-<p>CDN: 分布式（地域分布式）</p>
-</blockquote>
-</li>
-</ol>
-<p>###关于编写代码时候的一些优化技巧</p>
-<blockquote>
-<p>除了减少HTTP请求次数和大小可以优化性能，我们在编写代码的时候，可以进行一些优化，让页面的性能有所提升（有些不好的代码编写习惯，会导致页面性能消耗太大，例如：内存泄漏）</p>
-</blockquote>
-<ol>
-<li><p>在编写JS代码的时候，尽量减少对DOM的操作</p>
-<ul>
-<li>VUE和REACT框架在这方面处理的非常不错</li>
-</ul>
-<blockquote>
-<p>在JS中操作DOM是一个非常消耗性能的事情，但是我们又不可避免的操作DOM，我们只能尽量减少对于他的操作</p>
-<p>【操作DOM的弊端】</p>
-<ol>
-<li>DOM存在映射机制（JS中的DOM元素对象和页面中的DOM结构是存在映射机制的，一改则都改），这种映射机制，是浏览器按照W3C标准完成对JS语言的构建和DOM的构建（其实就是构建了一个监听机制），操作DOM是同时要修改两个地方，相对于一些其他的JS编程来说是消耗性能的</li>
-<li>页面中的DOM结构改变或者样式改变，会触发浏览器的回流（浏览器会把DOM结构重新进行计算，这个操作很耗性能）和重绘（把一个元素样式重新渲染）</li>
-</ol>
-</blockquote>
-</li>
-<li><p>编写代码的时候，更多使用的是异步编程</p>
-<blockquote>
-<p>同步编程会导致：上面东西完不成，下面任务也做不了，我们开发的时候，可以把某一个区域模块都设置为异步编程，这样只要模块之间没有必然的先后顺序，都可以独立进行加载，不会受到上面模块的堵塞影响（用的不多）</p>
-<p>尤其是AJAX数据请求，我们都要使用异步编程，最好是基于promise设计模式进行管理（项目中经常使用fetch，vue axios等插件来进行AJAX请求处理，因为这些插件中就是基于promise设计模式对ajax进行封装处理）</p>
-</blockquote>
-</li>
-<li><p>在真实项目中，我们尽量避免一次性循环过多数据（因为循环操作是同步编程），尤其是要避免while导致的死循环操作</p>
-</li>
-<li><p>CSS选择器优化</p>
-<blockquote>
-<ol>
-<li>尽量减少标签选择器的使用</li>
-<li>尽可能少使用ID选择器，多使用样式类选择器（通用性强）</li>
-<li>减少选择器前面的前缀，例如：<code>.headerBox .nav .left a{}</code> (选择器是从右向左查找的)</li>
-</ol>
-</blockquote>
-</li>
-<li><p>避免使用CSS表达式</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*CSS表达式*/</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="built_in">expression</span>((new Data()).<span class="built_in">getHours</span>()%<span class="number">2</span>?<span class="string">'red'</span>:<span class="string">'blue'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>减少页面中的冗余代码，尽可能提高方法的重复使用率：“低耦合高内聚”</p>
-</li>
-<li><p>最好CSS放在HEAD中，JS放在BODY尾部，让页面加载的时候，先加载CSS，在加载JS（先呈现页面，再给用户提供操作）</p>
-</li>
-<li><p>JS中避免使用eval</p>
-<blockquote>
-<ol>
-<li>性能消耗大</li>
-<li>代码压缩后，容易出现代码执行错乱问题</li>
-</ol>
-</blockquote>
-</li>
-<li><p>JS中尽量减少闭包的使用</p>
-<blockquote>
-<ol>
-<li>闭包会形成一个不销毁的栈内存，过多的栈内存累积会影响页面的性能</li>
-<li>还会容易导致内存泄漏</li>
-</ol>
-<p>闭包也有自己的优势：保护和保存，我们只能尽量减少，但不可避免</p>
-</blockquote>
-</li>
-<li><p>在做DOM事件绑定的时候，尽量避免一个个的事件绑定，而是采用性能更高的事件委托来实现</p>
-<blockquote>
-<p>事件委托（事件代理）</p>
-<p>把事件绑定给外层容器，当里面的后代元素相关行为被触发，外层容器绑定的方法也会被触发执行（冒泡传播机制导致），通过事件源是谁，我们做不同的操作即可</p>
-</blockquote>
-</li>
-<li><p>尽量使用CSS3动画代替JS动画，因为CSS3动画或者变形都开启了硬件加速，性能比JS动画好</p>
-</li>
-<li><p>编写JS代码的时候尽可能使用设计模式来构建体系，方便后期的维护，也提高了扩充性等</p>
-</li>
-<li>CSS中减少对滤镜的使用，页面中也减少对于FLASH的使用</li>
-</ol>
-<h3 id="关于页面的SEO优化技巧"><a href="#关于页面的SEO优化技巧" class="headerlink" title="关于页面的SEO优化技巧"></a>关于页面的SEO优化技巧</h3><ol>
-<li><p>页面中杜绝出现死链接（404页面），而且对于用户输入的一个错误页面，我们要引导到404提示页面中（服务器处理的）</p>
-</li>
-<li><p>避免浏览器中异常错误的抛出</p>
-<blockquote>
-<p>尽可能避免代码出错</p>
-<p>使用TRY CATCH做异常信息捕获</p>
-</blockquote>
-</li>
-<li><p>增加页面关键词优化</p>
-</li>
-</ol>
-<p># </p>
 
       
     </div>
@@ -1069,7 +994,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1187,7 +1112,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#成为栈开发工程师需要掌握的技术栈"><span class="nav-number">1.</span> <span class="nav-text">成为栈开发工程师需要掌握的技术栈</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何成为一名初级全栈开发工程师"><span class="nav-number">1.1.</span> <span class="nav-text">如何成为一名初级全栈开发工程师</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是全栈开发工程师？"><span class="nav-number">1.1.1.</span> <span class="nav-text">什么是全栈开发工程师？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#真实项目的部署流程-以及一点职业发展建议"><span class="nav-number">2.</span> <span class="nav-text">真实项目的部署流程(以及一点职业发展建议)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端和后端是如何通信的？"><span class="nav-number">2.0.1.</span> <span class="nav-text">前端和后端是如何通信的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#职业规划建议："><span class="nav-number">2.0.2.</span> <span class="nav-text">职业规划建议：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端和服务器端是如何通信的？"><span class="nav-number">2.0.3.</span> <span class="nav-text">客户端和服务器端是如何通信的？</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP等传输协议讲解"><span class="nav-number">3.</span> <span class="nav-text">HTTP等传输协议讲解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URL，URI，URN"><span class="nav-number">3.0.1.</span> <span class="nav-text">URL，URI，URN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个完整的URL包含很多部分："><span class="nav-number">3.0.2.</span> <span class="nav-text">一个完整的URL包含很多部分：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP报文的一些核心知识"><span class="nav-number">4.</span> <span class="nav-text">HTTP报文的一些核心知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP报文"><span class="nav-number">4.0.1.</span> <span class="nav-text">HTTP报文</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前端开发优化的一些常见办法-汇总"><span class="nav-number">5.</span> <span class="nav-text">前端开发优化的一些常见办法(汇总)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WEB前端开发常用的优化技巧汇总"><span class="nav-number">5.1.</span> <span class="nav-text">WEB前端开发常用的优化技巧汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#减少HTTP请求的次数或者减小请求数据的大小"><span class="nav-number">5.1.1.</span> <span class="nav-text">减少HTTP请求的次数或者减小请求数据的大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于页面的SEO优化技巧"><span class="nav-number">5.1.2.</span> <span class="nav-text">关于页面的SEO优化技巧</span></a></li></ol></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#成为栈开发工程师需要掌握的技术栈"><span class="nav-number">1.</span> <span class="nav-text">成为栈开发工程师需要掌握的技术栈</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何成为一名初级全栈开发工程师"><span class="nav-number">1.1.</span> <span class="nav-text">如何成为一名初级全栈开发工程师</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是全栈开发工程师？"><span class="nav-number">1.1.1.</span> <span class="nav-text">什么是全栈开发工程师？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#真实项目的部署流程-以及一点职业发展建议"><span class="nav-number">2.</span> <span class="nav-text">真实项目的部署流程(以及一点职业发展建议)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端和后端是如何通信的？"><span class="nav-number">2.0.1.</span> <span class="nav-text">前端和后端是如何通信的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#职业规划建议："><span class="nav-number">2.0.2.</span> <span class="nav-text">职业规划建议：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端和服务器端是如何通信的？"><span class="nav-number">2.0.3.</span> <span class="nav-text">客户端和服务器端是如何通信的？</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP等传输协议讲解"><span class="nav-number">3.</span> <span class="nav-text">HTTP等传输协议讲解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URL，URI，URN"><span class="nav-number">3.0.1.</span> <span class="nav-text">URL，URI，URN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个完整的URL包含很多部分："><span class="nav-number">3.0.2.</span> <span class="nav-text">一个完整的URL包含很多部分：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP报文的一些核心知识"><span class="nav-number">4.</span> <span class="nav-text">HTTP报文的一些核心知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP报文"><span class="nav-number">4.0.1.</span> <span class="nav-text">HTTP报文</span></a></li></ol></li></div>
             
 
           </div>
@@ -1226,7 +1151,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">76k</span>
+    <span title="站点总字数">78k</span>
   
 
   
@@ -1235,7 +1160,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:09</span>
+    <span title="站点阅读时长">1:11</span>
   
 </div>
 
