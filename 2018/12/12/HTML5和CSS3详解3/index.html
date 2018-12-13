@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/theme-loading-bar.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="dhZnWY08vgwFTHzy8YCcGEfqgTvbZHpY6HaJ97rnZJg">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.ico?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.ico?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: false,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "e3af4927"
+    });
+  daovoice('update');
+  </script>
+
+
+  <meta name="description" content="一：CSS3简介：如同人类的的进化一样，CSS3是CSS2的”进化”版本，在CSS2基础上，增强或新增了许多特性， 弥补了CSS2的众多不足之处，使得Web开发变得更为高效和便捷 动画 圆角 阴影 边框图片 … Css当js用 Js当后台语言用 二：CSS3现状： 浏览器支持程度差，需要添加私有前缀(移动端) a.  requestFullScreen b.  webkitRequestFullS">
+<meta name="keywords" content="HTML5和CSS3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5和CSS3详解3">
+<meta property="og:url" content="http://wudiufo.github.io/2018/12/12/HTML5和CSS3详解3/index.html">
+<meta property="og:site_name" content="Haiyang">
+<meta property="og:description" content="一：CSS3简介：如同人类的的进化一样，CSS3是CSS2的”进化”版本，在CSS2基础上，增强或新增了许多特性， 弥补了CSS2的众多不足之处，使得Web开发变得更为高效和便捷 动画 圆角 阴影 边框图片 … Css当js用 Js当后台语言用 二：CSS3现状： 浏览器支持程度差，需要添加私有前缀(移动端) a.  requestFullScreen b.  webkitRequestFullS">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://wudiufo.github.io/2018/12/12/HTML5和CSS3详解3/图片1.png">
+<meta property="og:image" content="http://wudiufo.github.io/2018/12/12/HTML5和CSS3详解3/图片2.png">
+<meta property="og:image" content="http://wudiufo.github.io/2018/12/12/HTML5和CSS3详解3/1.jpg">
+<meta property="og:updated_time" content="2018-12-13T17:11:56.487Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5和CSS3详解3">
+<meta name="twitter:description" content="一：CSS3简介：如同人类的的进化一样，CSS3是CSS2的”进化”版本，在CSS2基础上，增强或新增了许多特性， 弥补了CSS2的众多不足之处，使得Web开发变得更为高效和便捷 动画 圆角 阴影 边框图片 … Css当js用 Js当后台语言用 二：CSS3现状： 浏览器支持程度差，需要添加私有前缀(移动端) a.  requestFullScreen b.  webkitRequestFullS">
+<meta name="twitter:image" content="http://wudiufo.github.io/2018/12/12/HTML5和CSS3详解3/图片1.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Haiyang" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://wudiufo.github.io/2018/12/12/HTML5和CSS3详解3/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>HTML5和CSS3详解3 | Haiyang</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Haiyang</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">前端全栈，python全栈，人工智能，大数据，网络攻防</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+    <a href="https://github.com/wudiufo" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wudiufo.github.io/2018/12/12/HTML5和CSS3详解3/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Haiyang">
+      <meta itemprop="description" content="前端全栈，python全栈，人工智能，大数据，网络攻防">
+      <meta itemprop="image" content="/images/cat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haiyang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">HTML5和CSS3详解3
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-12 22:04:18" itemprop="dateCreated datePublished" datetime="2018-12-12T22:04:18+08:00">2018-12-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-14 01:11:56" itemprop="dateModified" datetime="2018-12-14T01:11:56+08:00">2018-12-14</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/HTML5和CSS3/" itemprop="url" rel="index"><span itemprop="name">HTML5和CSS3</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">11k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">10 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一：CSS3简介："><a href="#一：CSS3简介：" class="headerlink" title="一：CSS3简介："></a>一：CSS3简介：</h1><p>如同人类的的进化一样，CSS3是CSS2的”进化”版本，在CSS2基础上，增强或新增了许多特性， 弥补了CSS2的众多不足之处，使得Web开发变得更为高效和便捷 动画 圆角 阴影 边框图片 …</p>
+<p>Css当js用</p>
+<p>Js当后台语言用</p>
+<h1 id="二：CSS3现状："><a href="#二：CSS3现状：" class="headerlink" title="二：CSS3现状："></a>二：CSS3现状：</h1><ol>
+<li><p>浏览器支持程度差，需要添加私有前缀(移动端)</p>
+<p>a.  requestFullScreen</p>
+<p>b.  webkitRequestFullScreen</p>
+<p>c.  mozRequestFullScreen</p>
+<p>d.  msRequestFullScreen</p>
+<p>e.  oRequestFullScreen</p>
+</li>
+</ol>
+<p>2、移动端支持优于PC端</p>
+<p>3、不断改进中</p>
+<p>4、应用相对广泛</p>
+<h1 id="三：选择器："><a href="#三：选择器：" class="headerlink" title="三：选择器："></a>三：选择器：</h1><p>CSS3新增了许多灵活查找元素的方法，极大的提高了查找元素的效率和精准度。CSS3选择器与jQuery中所提供的绝大部分选择器兼容</p>
+<ol>
+<li>属性选择器：</li>
+</ol>
+<p>a)  E[attribute] 表示存在attr属性即可；</p>
+<blockquote>
+<p>div[class]</p>
+</blockquote>
+<p>b)  E[attr=val] 表示属性值完全等于val；</p>
+<blockquote>
+<p>div[class=mydemo]</p>
+</blockquote>
+<p>c)  E[attr*=val] 表示的属性值里包含val字符并且在”任意”位置；</p>
+<blockquote>
+<p>div[class*=mydemo]</p>
+</blockquote>
+<p>d)  E[attr\^=val] 表示的属性值里包含val字符并且在”开始”位置；</p>
+<blockquote>
+<p>div[class\^=mydemo]</p>
+</blockquote>
+<p>e)  E[attr\$=val] 表示的属性值里包含val字符并且在”结束”位置；</p>
+<blockquote>
+<p>div[class\$=demos]</p>
+</blockquote>
+<ol start="2">
+<li><p>伪类选择器-伪元素选择器：</p>
+<p>a.  之前学习的：a:hover a:link a:active a:visited</p>
+<p>b.  以某元素相对于其父元素或兄弟元素的位置来获取无素的结构伪类</p>
+</li>
+</ol>
+<p>f)  E:first-child:查找E这个元素的父元素的第一个子元素E</p>
+<p>g)  E:last-child:最后一个子元素</p>
+<p>h)  E:nth-child(n): 第n个子元素，计算方法是E元素的全部兄弟元素</p>
+<p>i)  E:nth-last-child(n): 同E:nth-child(n) 相似，只是倒着计算</p>
+<p>j)  E:nth-child(even): 所有的偶数</p>
+<p>k)  E:nth-child(odd): 所有的奇数</p>
+<p>l)  E:nth-of-type(n):指定类型</p>
+<p>m)  E:empty 选中没有任何子节点的E元素，注意，空格也算子元素</p>
+<p>n)  E:target 结合锚点进行使用，处于当前锚点的元素会被选中</p>
+<p>o)  重点说明：n遵循线性变化，其取值0、1、2、3、4、... 但是当n\&lt;=0时，选取无效</p>
+<p>p)  案例代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*第一个li元素*/</span></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:first-child</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*最后一个元素*/</span></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:last-child</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*获取第10个元素*/</span></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(10)</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: orange;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*获取倒数第3个li元素*/</span></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-last-child(3)</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: purple;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*获取索引顺序为6的倍数的li元素*/</span></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(6n)</span>&#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*获取所有索引为偶数的li元素*/</span></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(even)</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*获取前5个li元素*/</span></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(-n+5)</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ddd</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>c.  n可是多种形式：nth-child(2n)、nth-child(2n+1)、nth-child(-n+5)等</p>
+<ol start="3">
+<li><p>伪元素选择器：</p>
+<p>a)    重点：E::before、E::after</p>
+<ol>
+<li><p>是一个行内元素，需要转换成块:display:block   float:**  position:</p>
+</li>
+<li><p>必须添加content,哪怕不设置内容，也需要content:””</p>
+</li>
+<li><p>E:after、E:before 在旧版本里是伪类，在新版本里是伪元素，新版本下E:after、E:before会被自动识别为E::after、E::before，按伪元素来对待，这样做的目的是用来做兼容处理</p>
+</li>
+<li><p>E::before: 定义在一个元素的内容之前插入<a href="http://www.dreamdu.com/css/property_content/" target="_blank" rel="noopener">content</a>属性定义的内容与样式</p>
+</li>
+<li><p>E::after: 定义在一个元素的内容之后插入<a href="http://www.dreamdu.com/css/property_content/" target="_blank" rel="noopener">content</a>属性定义的内容与样式</p>
+</li>
+<li><p><strong>注意：</strong></p>
+</li>
+<li><p>IE6、IE7与IE8（怪异模式Quirks mode）不支持此伪元素</p>
+</li>
+<li><p>CSS2中 E:before或者E:after，是属于伪类的，并且没有伪元素的概念，CSS3中 提出伪元素的概念 E::before和E::after，并且归属到了伪元素当中，伪类里就不再存在E:before或者   E:after伪类</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>   b)    E::first-letter文本的第一个字母或字(不是词组)</p>
+<p>   c)    E::first-line 文本第一行</p>
+<p>   d)    E::selection 可改变选中文本的样式</p>
+<p>四：颜色设置： 11111111 00000000 0-255</p>
+<p>HTML5中添加了一些新的颜色的表示方式</p>
+<p>1.RGBA：说得简单一点就是在RGB的基础上加进了一个通道Alpha。RGBA在RGB的基础上多了控制alpha透明度的参数。以上R、G、B三个参数，正整数值的取值范围为：0 - 255。百分数值的取值范围为：0.0% - 100.0%。超出范围的数值将被截至其最接近的取值极限。并非所有浏览器都支持使用百分数值。A参数，取值在0~1之间，不可为负值。RGBA比元素设置CSS的透明度更好，因为单独的颜色可以在不影响整个元素的透明度，他不会影响到元素其他的属性，比如说边框，字体同时也不会影响到其他元素的相关透明度</p>
+<p>a)  <strong>语法:</strong></p>
+<p>​    R：红色值。正整数 | 百分数</p>
+<p>​    G：绿色值。正整数 | 百分数</p>
+<p>​    B：蓝色值。正整数| 百分数</p>
+<p>​    A：透明度。取值0~1之间</p>
+<p>b)  <strong>使用示例：</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(10,20,245,0.5);</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>HSLA(H,S,L,A)：</li>
+</ol>
+<p>a)  <strong>此色彩模式与<a href="http://www.css88.com/book/css/values/color/hsl.htm" target="_blank" rel="noopener">HSL</a>相同，只是在<a href="http://www.css88.com/book/css/values/color/hsl.htm" target="_blank" rel="noopener">HSL</a>模式上新增了Alpha透明度</strong></p>
+<p>b)  <strong>语法：</strong></p>
+<p>​    H：Hue(色调,色相)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取值为：0 – 360,过渡为：(红橙黄绿青蓝紫红)</p>
+<p>​    S：Saturation(饱和度)。取值为：0.0% - 100.0%</p>
+<p>​    L：Lightness(亮度)。取值为：0.0% - 100.0%，50%是平衡值</p>
+<p>​    A：Alpha透明度。取值0~1之间。</p>
+<p>c)  <strong>示例</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">hsla</span>(360,100%,50%,0.6);</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>3.关于透明度的补充说明：</strong></p>
+<p>a)  opacity只能针对整个盒子设置透明度，子盒子及内容会继承父盒子的透明度</p>
+<p>b)  transparent 不可调节透明度，始终完全透明</p>
+<p>c)  使用rgba 来控制颜色，相对opacity ，不具有继承性</p>
+<h1 id="五：文本-shadow阴影-："><a href="#五：文本-shadow阴影-：" class="headerlink" title="五：文本(shadow阴影)："></a>五：文本(shadow阴影)：</h1><p><a href="http://www.w3.org/Style/Examples/007/text-shadow.en.html#translations" target="_blank" rel="noopener">text-shadow</a>还没有出现时，大家在网页设计中阴影一般都是用photoshop做成图片，现在有了css3可以直接使用<a href="http://www.w3.org/Style/Examples/007/text-shadow.en.html#translations" target="_blank" rel="noopener">text-shadow</a>属性来指定阴影。这个属性可以有两个作用，产生阴影和模糊主体。这样在不使用图片时能给文字增加质感</p>
+<ol>
+<li><strong>语法：</strong></li>
+</ol>
+<blockquote>
+<p><strong>text-shadow ： none | \&lt;length> none | [\&lt;shadow>, ] * \&lt;shadow> 或none | \&lt;color> [, \&lt;color> ]*</strong></p>
+<p><strong>也就是：</strong></p>
+<p><strong>text-shadow:[颜色(Color) x轴(X Offset) y轴(Y Offset) 模糊半径(Blur)],[颜色(color) x轴(X Offset) y轴(Y Offset) 模糊半径(Blur)]...</strong></p>
+<p><strong>或者</strong></p>
+<p><strong>text-shadow:[x轴(X Offset) y轴(Y Offset) 模糊半径(Blur) 颜色(Color)],[x轴(X Offset) y轴(Y Offset) 模糊半径(Blur) 颜色(Color)]...</strong></p>
+</blockquote>
+<ol start="2">
+<li><p><strong>取值：</strong></p>
+<p>a.  \&lt;length>：长度值，可以是负值。用来指定阴影的延伸距离。其中X Offset是水平偏移值，Y Offset是垂直偏移值</p>
+<p>b.  \&lt;shadow>：阴影的模糊值，不可以是负值，用来指定模糊效果的作用距离</p>
+<p>c.  \&lt;color>：指定阴影颜色，也可以是rgba透明色。</p>
+<p>d.  图示：</p>
+</li>
+</ol>
+<p><img src="/2018/12/12/HTML5和CSS3详解3/图片1.png" alt="图片1"></p>
+<ol start="3">
+<li><strong>说明：</strong></li>
+</ol>
+<blockquote>
+<p>可以给一个对象应用一组或多组阴影效果，方式如前面的语法显示一样，用逗号隔开。text-shadow: X-Offset Y-Offset Blur Color中X-Offset表示阴影的水平偏移距离，其值为正值时阴影向右偏移，如果其值为负值时，阴影向左偏移；Y-Offset是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移反之其值是负值时阴影向顶部偏移；Blur是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；Color是指阴影的颜色，其可以使用rgba色</p>
+</blockquote>
+<ol start="4">
+<li><strong>一些效果案例代码：</strong></li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#666</span>;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">20px</span> auto;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">font</span>:bold <span class="number">80px</span>/<span class="number">100%</span> <span class="string">"微软雅黑"</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*侧阴影效果*/</span></span><br><span class="line"><span class="selector-class">.demo1</span>&#123;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">2px</span> <span class="number">2px</span> <span class="number">2px</span> <span class="number">#ff0000</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*辉光效果*/</span></span><br><span class="line"><span class="selector-class">.demo2</span>&#123;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*多层辉光效果*/</span></span><br><span class="line"><span class="selector-class">.demo3</span>&#123;</span><br><span class="line">    <span class="attribute">text-shadow</span>:<span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#fff</span>,<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#fff</span>,<span class="number">0</span> <span class="number">0</span> <span class="number">40px</span> <span class="number">#fff</span> ,<span class="number">0</span> <span class="number">0</span> <span class="number">70px</span> red ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*苹果经典效果*/</span></span><br><span class="line"><span class="selector-class">.demo4</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*浮雕效果*/</span></span><br><span class="line"><span class="selector-class">.demo5</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#ccc</span>;</span><br><span class="line">    <span class="attribute">text-shadow</span>: -<span class="number">1px</span> -<span class="number">1px</span> <span class="number">0px</span> <span class="number">#fff</span>,-<span class="number">2px</span> -<span class="number">2px</span> <span class="number">0px</span> <span class="number">#eee</span>,<span class="number">1px</span> <span class="number">1px</span> <span class="number">0px</span> <span class="number">#444</span>,<span class="number">2px</span> <span class="number">2px</span> <span class="number">0px</span> <span class="number">#333</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*模糊字效果*/</span></span><br><span class="line"><span class="selector-class">.demo6</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: transparent; <span class="comment">/*将本身设置为透明*/</span></span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="number">#ff9966</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="六：盒模型："><a href="#六：盒模型：" class="headerlink" title="六：盒模型："></a>六：盒模型：</h1><p>1.在默认情况下，CSS设置的盒子宽度仅仅是内容区的宽度，而非盒子的宽度。同样，高度类似。真正盒子的宽度（在页面呈现出来的宽度）和高度，需要加上一些其它的属性。例如：</p>
+<p>a)  padding + border + width = 盒子的宽度</p>
+<p>b)  padding + border + height = 盒子的高度</p>
+<p>很明显，这不直观，很容易出错，造成网页中其它元素的错位。</p>
+<p>2. CSS3中可以通过box-sizing 来指定盒模型，即可指定为content-box、border-box，这样我们计算盒子大小的方式就发生了改变</p>
+<p>a)  content-box:对象的实际宽度等于设置的width值和border、padding之和</p>
+<p>b)  border-box： 对象的实际宽度就等于设置的width值，即使定义有border和padding也不会改变对象的实际宽度</p>
+<blockquote>
+<p>3.浏览器的兼容性：</p>
+<p>IE8及以上版本支持该属性，Firefox 需要加上浏览器厂商前缀-moz-，对于低版本的IOS和Android浏览器也需要加上-webkit-</p>
+</blockquote>
+<h1 id="七：边框圆角"><a href="#七：边框圆角" class="headerlink" title="七：边框圆角"></a>七：边框圆角</h1><p>border-radius可以通过值来定义样式相同的角，也对每个角分别定义</p>
+<p>1.值的说明：</p>
+<p>border-radius：*px: 将创建四个大小一样的圆角</p>
+<p>border-radius:*px *px *px *px: 四个值分别表示左上角、右上角、右下角、左下角</p>
+<p>border-radius:*px *px：第一个值表示左上角、右下角；第二个值表示右上角、左下角</p>
+<p>border-radius:*px *px *px：第一个值表示左上角；第二个值表示右上角、左下角；第三个值表示右下角</p>
+<p>2.单个圆角的设置：除了同时设置四个圆角以外，还可以单独对每个角进行设置。对应四个角，CSS3提供四个单独的属性：</p>
+<p>* border-top-left-radius</p>
+<p>* border-top-right-radius</p>
+<p>* border-bottom-right-radius</p>
+<p>* border-bottom-left-radius</p>
+<p>这四个属性都可以同时设置1到2个值。如果设置1个值，表示水平半径与垂直半径相等。如果设置2个值，第一个值表示水平半径，第二个值表示垂直半径</p>
+<p>3.补充：创建两个值的非对称圆角还有一种书写方式：如border-radius:20px/10px;表示在水平方向上20px,在垂直方向上10px;具体说明如下：可分别设置长、短半径，以”/“进行分隔，遵循”1，2，3，4”规则，”/“前面的1~4个用来设置横轴半径（分别对应横轴1、2、3、4位置 ），”/“后面1~4个参数用来设置纵轴半径（分别对应纵轴1、2、3、4位置 ）</p>
+<p>4.示例代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="comment">/*height: 200px;*/</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;  <span class="comment">/*为椭圆设置的高度*/</span></span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">    <span class="comment">/*四个方向的圆角值相同*/</span></span><br><span class="line">    <span class="comment">/*border-radius: 100px;*/</span></span><br><span class="line">    <span class="comment">/*左上，右下为20px   右上，左下为40px*/</span></span><br><span class="line">    <span class="comment">/*border-radius: 20px 40px;*/</span></span><br><span class="line">    <span class="comment">/*左上为20px   右上，左下为40px  右下为80px*/</span></span><br><span class="line">    <span class="comment">/*border-radius: 20px 40px 80px;*/</span></span><br><span class="line">    <span class="comment">/*左上：20px  右上：40px 右下：80px  左下：100px*/</span></span><br><span class="line">    <span class="comment">/*border-radius: 20px 40px 80px 100px;*/</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*设置某一个方向上的圆角*/</span></span><br><span class="line">    <span class="comment">/*border-bottom-left-radius: 100px;*/</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*非对称圆角--制作椭圆*/</span></span><br><span class="line">    <span class="attribute">border-top-left-radius</span>: <span class="number">100px</span> <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">100px</span> <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">border-bottom-right-radius</span>: <span class="number">100px</span> <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">border-bottom-left-radius</span>: <span class="number">100px</span> <span class="number">50px</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*非对称圆角的简写方式*/</span></span><br><span class="line">    <span class="comment">/*四个方向上都是一致的非对称圆角*/</span></span><br><span class="line">    <span class="comment">/*border-radius: 100px/50px;*/</span></span><br><span class="line">    <span class="comment">/*也可以这样*/</span></span><br><span class="line">    <span class="comment">/*border-radius: 100px 80px 60px 20px/20px 60px 80px 100px;*/</span></span><br><span class="line">    <span class="comment">/*等价于：*/</span></span><br><span class="line">    <span class="comment">/*border-top-left-radius: 100px 20px;</span></span><br><span class="line"><span class="comment">    border-top-right-radius: 80px 60px;</span></span><br><span class="line"><span class="comment">    border-bottom-right-radius: 60px 80px;</span></span><br><span class="line"><span class="comment">    border-bottom-left-radius: 20px 100px;*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="八：案例：android机器人"><a href="#八：案例：android机器人" class="headerlink" title="八：案例：android机器人"></a>八：案例：android机器人</h1><ol>
+<li>效果：</li>
+</ol>
+<p><img src="/2018/12/12/HTML5和CSS3详解3/图片2.png" alt="图片2"></p>
+<ol start="2">
+<li>Div结构：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--身体头部--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--身体主体--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"body"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--脚--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>样式：主要使用伪元素选择器</li>
+</ol>
+   <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    *&#123;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">body</span>&#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.content</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">450px</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">        <span class="attribute">padding-top</span>:<span class="number">30px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.header</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">        <span class="attribute">background-color</span>: green;</span><br><span class="line">        <span class="attribute">border-radius</span>: <span class="number">100px</span> <span class="number">100px</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">position</span>: relative;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.header</span><span class="selector-pseudo">::before</span>,</span><br><span class="line">    <span class="selector-class">.header</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">        <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">        <span class="attribute">position</span>: absolute;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">        <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">        <span class="attribute">top</span>: <span class="number">40px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.header</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">        <span class="attribute">left</span>:<span class="number">50px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.header</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">        <span class="attribute">right</span>:<span class="number">50px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.body</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: green;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">        <span class="attribute">margin-top</span>:<span class="number">10px</span>;</span><br><span class="line">        <span class="attribute">border-radius</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span> <span class="number">20px</span>;</span><br><span class="line">        <span class="attribute">position</span>: relative;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.body</span><span class="selector-pseudo">::before</span>,</span><br><span class="line">    <span class="selector-class">.body</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">        <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">        <span class="attribute">position</span>: absolute;</span><br><span class="line">        <span class="attribute">top</span>: <span class="number">10px</span>;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: green;</span><br><span class="line">        <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.body</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">        <span class="attribute">left</span>:-<span class="number">50px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.body</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">        <span class="attribute">right</span>:-<span class="number">50px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.footer</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">height</span>:<span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">margin</span>:<span class="number">0</span> auto;</span><br><span class="line">        <span class="attribute">position</span>: relative;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.footer</span><span class="selector-pseudo">::before</span>,</span><br><span class="line">    <span class="selector-class">.footer</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">        <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">        <span class="attribute">position</span>: absolute;</span><br><span class="line">        <span class="attribute">top</span>: <span class="number">0px</span>;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">35px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: green;</span><br><span class="line">        <span class="attribute">border-radius</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">40px</span> <span class="number">40px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.footer</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">        <span class="attribute">left</span>:<span class="number">40px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.footer</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">        <span class="attribute">right</span>:<span class="number">40px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="九：边框阴影："><a href="#九：边框阴影：" class="headerlink" title="九：边框阴影："></a>九：边框阴影：</h1><ol>
+<li><p>box-shadow 属性向边框添加一个或多个阴影。</p>
+</li>
+<li><p>语法：box-shadow: h-shadow v-shadow blur spread color inset;</p>
+</li>
+</ol>
+<blockquote>
+<p>注释：box-shadow 向框添加一个或多个阴影。该属性是由逗号分隔的阴影列表，每个阴影由 2-4 个长度值、可选的颜色值以及可选的 inset 关键词来规定。省略长度的值是 0。</p>
+</blockquote>
+<ol start="3">
+<li>属性值说明：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h-shadow</td>
+<td>必需。水平阴影的位置。允许负值。</td>
+</tr>
+<tr>
+<td>v-shadow</td>
+<td>必需。垂直阴影的位置。允许负值。</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>可选。模糊距离。</td>
+</tr>
+<tr>
+<td>spread</td>
+<td>可选。阴影的尺寸。值越大，阴影的扩散面积越大</td>
+</tr>
+<tr>
+<td>color</td>
+<td>可选。阴影的颜色。</td>
+</tr>
+<tr>
+<td>inset</td>
+<td>可选。将外部阴影 (outset) 改为内部阴影。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ol start="4">
+<li><p>在添加阴影的时候，最好考虑到不同浏览器的兼容</p>
+</li>
+<li><p>案例示例：</p>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*为item添加边框阴影*/</span></span><br><span class="line"><span class="selector-tag">div</span><span class="selector-attr">[class=item]</span><span class="selector-pseudo">:nth-child(-n+4)</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">3px</span> <span class="number">0px</span> <span class="number">#bbb</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*可以同时添加多个边框阴影*/</span></span><br><span class="line"><span class="selector-tag">div</span><span class="selector-attr">[class=item]</span><span class="selector-pseudo">:last-child</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">2px</span> <span class="number">#ff0000</span> inset,-<span class="number">1px</span> -<span class="number">1px</span> <span class="number">2px</span> <span class="number">#ff0000</span> inset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="十：边框图片"><a href="#十：边框图片" class="headerlink" title="十：边框图片"></a>十：边框图片</h1><ol>
+<li><p>功能：将图片规定为包围 div 元素的边框</p>
+<p>a.  定义和用法： border-image 属性是一个简写属性，用于设置以下属性</p>
+</li>
+</ol>
+<blockquote>
+<p>border-image-source</p>
+<p>border-image-slice</p>
+<p>border-image-width</p>
+<p>border-image-outset</p>
+<p>border-image-repeat</p>
+</blockquote>
+<p>b.  属性说明：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border-image-source</td>
+<td>用在边框的图片的路径。</td>
+</tr>
+<tr>
+<td>border-image-slice</td>
+<td>图片边框向内偏移—裁切。</td>
+</tr>
+<tr>
+<td>border-image-width</td>
+<td>图片边框的宽度。</td>
+</tr>
+<tr>
+<td>border-image-outset</td>
+<td>边框图像区域超出边框的量。</td>
+</tr>
+<tr>
+<td>border-image-repeat</td>
+<td>图像边框是否应平铺(repeated)、铺满(rounded)或拉伸(stretched)。</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li><p>案例：任意拉伸的按钮：通过一个按钮的背景图片制作出任意大小的按钮，实现背景填充效果：</p>
+<ol>
+<li>效果：</li>
+</ol>
+</li>
+</ol>
+<p><img src="/2018/12/12/HTML5和CSS3详解3/1.jpg" alt="1"></p>
+<ol start="2">
+<li>代码：</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.downLoad</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">    <span class="comment">/*设置图片边框背景*/</span></span><br><span class="line">    <span class="attribute">border-image</span>: <span class="built_in">url</span>(<span class="string">"../images/btn_bg.png"</span>);</span><br><span class="line">    <span class="comment">/*设置裁切区域，同时设置填充模式*/</span></span><br><span class="line">    <span class="attribute">border-image-slice</span>: <span class="number">10</span> fill;</span><br><span class="line">    <span class="comment">/*设置边框的大小，这个一般与裁切区域大小一致，否则就发生缩放*/</span></span><br><span class="line">    <span class="attribute">border-image-width</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="comment">/*设置边框的重复模式*/</span></span><br><span class="line">    <span class="attribute">border-image-repeat</span>: round;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果觉得文本对您有帮助，欢迎打赏</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.png" alt="Haiyang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/zhifubao.jpg" alt="Haiyang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/qq.png" alt="Haiyang 比特币">
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML5和CSS3/" rel="tag"># HTML5和CSS3</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/12/HTML5和CSS3详解6/" rel="next" title="HTML5和CSS3详解6">
+                <i class="fa fa-chevron-left"></i> HTML5和CSS3详解6
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/12/HTML5和CSS3详解1/" rel="prev" title="HTML5和CSS3详解1">
+                HTML5和CSS3详解1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTQ3OS8xODAyNg=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/cat.jpg" alt="Haiyang">
+            
+              <p class="site-author-name" itemprop="name">Haiyang</p>
+              <p class="site-description motion-element" itemprop="description">前端全栈，python全栈，人工智能，大数据，网络攻防</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/wudiufo" title="GitHub &rarr; https://github.com/wudiufo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:2712258402@qq.com" title="E-Mail &rarr; mailto:2712258402@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一：CSS3简介："><span class="nav-number">1.</span> <span class="nav-text">一：CSS3简介：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二：CSS3现状："><span class="nav-number">2.</span> <span class="nav-text">二：CSS3现状：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三：选择器："><span class="nav-number">3.</span> <span class="nav-text">三：选择器：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五：文本-shadow阴影-："><span class="nav-number">4.</span> <span class="nav-text">五：文本(shadow阴影)：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六：盒模型："><span class="nav-number">5.</span> <span class="nav-text">六：盒模型：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七：边框圆角"><span class="nav-number">6.</span> <span class="nav-text">七：边框圆角</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八：案例：android机器人"><span class="nav-number">7.</span> <span class="nav-text">八：案例：android机器人</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九：边框阴影："><span class="nav-number">8.</span> <span class="nav-text">九：边框阴影：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十：边框图片"><span class="nav-number">9.</span> <span class="nav-text">十：边框图片</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Haiyang</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">295k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">4:29</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+    <script type="text/javascript">
+      window.livereOptions = {
+        refer: '2018/12/12/HTML5和CSS3详解3/'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+  
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+    overflow: auto hidden;
+}
+</style>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+
+
+<script type="text/javascript" src="/lib/zclip/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

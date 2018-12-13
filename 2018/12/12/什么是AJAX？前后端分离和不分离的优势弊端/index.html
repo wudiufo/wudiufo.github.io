@@ -138,7 +138,9 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://wudiufo.github.io/2018/12/12/什么是AJAX？前后端分离和不分离的优势弊端/非完全前后端分离.jpg">
 <meta property="og:image" content="http://wudiufo.github.io/2018/12/12/什么是AJAX？前后端分离和不分离的优势弊端/前后端完全分离.jpg">
-<meta property="og:updated_time" content="2018-12-12T16:22:15.711Z">
+<meta property="og:image" content="http://wudiufo.github.io/2018/12/12/什么是AJAX？前后端分离和不分离的优势弊端/ajax.jpg">
+<meta property="og:image" content="http://wudiufo.github.io/2018/12/12/什么是AJAX？前后端分离和不分离的优势弊端/ajax2.jpg">
+<meta property="og:updated_time" content="2018-12-13T15:48:11.114Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是AJAX（前后端分离和不分离的优势弊端）">
 <meta name="twitter:description" content="AJAX基础知识及核心原理解读AJAX基础知识 什么是AJAX？ async javascript and xml  异步的JS和XML  XML：可扩展的标记语言 作用：是用来存储数据的（通过自己扩展的标记名称清晰地展示出数据结构） ajax之所以称为异步的js和xml，主要原因是：以前最开始使用ajax实现客户端和服务端数据通信的时候，传输数据的格式一般都是xml格式的数据，我们把他称之为异步">
@@ -514,7 +516,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-13 00:22:15" itemprop="dateModified" datetime="2018-12-13T00:22:15+08:00">2018-12-13</time>
+                <time title="修改时间：2018-12-13 23:48:11" itemprop="dateModified" datetime="2018-12-13T23:48:11+08:00">2018-12-13</time>
               
             
           </span>
@@ -566,7 +568,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.8k</span>
+                <span title="本文字数">10k</span>
               
 
               
@@ -580,7 +582,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">9 分钟</span>
               
             </div>
           
@@ -655,7 +657,138 @@
 <li>交由客户端渲染，首先需要把页面呈现，然后在通过JS的异步AJAX请求获取数据，在进行数据绑定，浏览器再把动态增加的部分重新渲染，无形中浪费了一些时间，没有服务器端渲染页面呈现速度快</li>
 </ol>
 </blockquote>
-<h3 id="基于原生JS实现AJAX"><a href="#基于原生JS实现AJAX" class="headerlink" title="基于原生JS实现AJAX"></a>基于原生JS实现AJAX</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="基于原生JS实现AJAX"><a href="#基于原生JS实现AJAX" class="headerlink" title="基于原生JS实现AJAX"></a>基于原生JS实现AJAX</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个AJAX对象</span></span><br><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest(); <span class="comment">// 不兼容IE6及更低版本浏览器（IE6：ActiveXObject）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 打开请求地址(可以理解为一些基础配置，但是并没有发送请求呢)</span></span><br><span class="line">xhr.open([method],[url],[<span class="keyword">async</span>],[userName],[passWord]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 监听AJAX状态改变，获取响应信息（获取响应头信息，获取响应主体信息）</span></span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(xhr.readyState === <span class="number">4</span> &amp;&amp; xhr.status === <span class="number">200</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> result = xhr.responseText; <span class="comment">// 获取响应主体中的内容</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 发送AJAX请求(括号中传递的内容就是请求主体的内容)</span></span><br><span class="line">xhr.send(<span class="literal">null</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>分析第二步中的细节点</strong></p>
+<blockquote>
+<p><code>xhr.open([method],[url],[async],[userName],[passWord])</code></p>
+<p>[AJAX请求方式]</p>
+<ol>
+<li>GET请求系列（获取）<ul>
+<li>get</li>
+<li>delete：从服务器上删除某些资源文件</li>
+<li>head：只想获取服务器返回的响应头信息（响应主体不需要获取）</li>
+</ul>
+</li>
+<li>POST请求系列（推送）<ul>
+<li>post</li>
+<li>put：向服务器中增加指定的资源文件</li>
+</ul>
+</li>
+</ol>
+<p>不管哪一种请求方式，客户端都可以把信息传递给服务器端，服务器端也可以把信息返回给客户端，只是GET系列一般以获取为主（给的少，拿回来的多），而POST系列一般以推送为主（给的多，拿回来的少）</p>
+<p>1）我们想要获取一些动态展示的信息，一般使用GET请求，因为只需要向服务器端发送请求，告诉服务器端我们想要什么，服务器端就会把需要的数据返回</p>
+<p>2）在实现注册功能的时候，我们需要把客户输入的信息发送给服务器进行存储，服务器一般返回成功或失败等状态，此时我们一般都是基于POST请求完成的</p>
+<hr>
+<p>GET系列请求和POST系列请求，在项目实战中存在很多的区别</p>
+<ol>
+<li><p>GET请求传递给服务器的内容一般没有POST请求传递给服务器的内容多</p>
+<p>原因：GET请求传递给服务器内容一般都是基于 <em>URL地址问号传递参数</em> 来实现的，而POST请求一般都是基于 <em>设置请求主体</em> 来实现的，各个浏览器都有URL最大长度的限制（谷歌：8kb，火狐：7kb，IE：2kb），超出长度部分，浏览器会自动截取掉，导致传递给服务器的数据缺失</p>
+<p>理论上POST请求通过请求主体传递是没有大小限制的，真实项目中为了保证传输的速率，我们也会限制大小（例如：上传的资料或者图片我们会做大小的限制）</p>
+</li>
+<li><p>GET请求很容易出现缓存（这个缓存不可控，一般我们都不需要），而POST不会出现缓存（除非自己做特殊处理）</p>
+<p>原因：GET是通过URL问号传参传递给服务器信息，会出现缓存；而POST是设置请求主体，不会出现缓存。</p>
+</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 每隔一分钟重新请求服务器端最新的数据，然后展示在页面中（页面中某些数据实时刷新）</span></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        url: <span class="string">'getList?lx = news'</span>,</span><br><span class="line">        ...</span><br><span class="line">        success: <span class="function"><span class="params">result</span>=&gt;</span>&#123;</span><br><span class="line">            <span class="comment">// 第一次请求数据回来，间隔一分钟后，浏览器又发送一次请求，但是新发送的请求不论是地址还是传递的参数都和第一次一模一样，浏览器很有可能会把上一次的数据获取，而不是获取最新的数据</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,<span class="number">600</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解决方案：在每一次重新请求的时候，在URL的末尾追加一个随机数，保证每一次请求的地址不完全一致，就可以避免是从缓存中读取的数据</span></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        url: <span class="string">'getList?lx = news&amp;_='</span> + <span class="built_in">Math</span>.random(),</span><br><span class="line">        ...</span><br><span class="line">        success: <span class="function"><span class="params">result</span>=&gt;</span>&#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,<span class="number">600</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="3">
+<li><p>GET请求没有POST请求安全（POST也并不是十分安全，只是相对安全）</p>
+<p>原因：还是因为GET是URL传参给服务器</p>
+<p>有一种比较简单的黑客技术：URL劫持，也就是可以把客户端传递给服务器的数据劫持到，导致信息泄露</p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<blockquote>
+<p>URL:请求数据的地址（API地址），在真实项目中，后台开发工程师会编写一个API文档，在API文档中汇总了获取哪些数据需要使用哪些地址，我们按照文档操作即可</p>
+<p>ASYNC：异步（SYNC 同步），设置当前AJAX请求是异步的还是同步的，不写默认是异步（TRUE），如果设置为FALSE，则代表当前请求是同步的</p>
+<p>用户名和密码：这两个参数一般不用，如果你请求的URL地址所在的服务器设定了访问权限，则需要我们提供可通行的用户名和密码才可以（一般服务器都是可以匿名访问的）</p>
+</blockquote>
+<hr>
+<p><strong>分析第三步中的细节点</strong></p>
+<blockquote>
+<p>AJAX状态码：描述当前AJAX操作状态的：</p>
+<p>xhr.readyState</p>
+<p>0：UNSENT未发送，只要创建一个AJAX对象，默认值就是零</p>
+<p>1：OPENED 我们已经执行了xhr.open这个操作</p>
+<p>2：HEADERS_RECEIVED 当前AJAX的请求已经发送，并且已经接收到服务器端返回的响应头信息了</p>
+<p>3：LOADING 响应主体的内容正在返回的路上</p>
+<p>4：DONE 响应主体内容已经返回到客户端</p>
+<hr>
+<p>HTTP网络状态码：记录了当前服务器返回信息的状态 ：</p>
+<p>xhr.status</p>
+<p>200：成功，一个完整的HTTP事务完成（以2开头的状态码一般都是成功）</p>
+<p>以3开头一般也是成功，只不过服务器端做了很多处理</p>
+<p>301：Moved Permanently 永久转移（永久重定向），一般应用于域名迁移</p>
+<p>302：Move temporarily 临时转移 （临时重定向，新的HTTP版本中任务307是临时重定向），一般用于服务器的负载均衡：当前服务器处理不过来，把当前请求临时交给其他的服务器处理（一般图片请求经常出现302，很多公司都有单独的图片服务器）</p>
+<p>304：Not Modified 从浏览器缓存中获取数据。把一些不经常更新的文件或者内容缓存到浏览器中，下一次从缓存中获取，减轻服务器压力，也提高页面加载速度</p>
+<p>以4开头的，一般都是失败，而且客户端的问题偏大</p>
+<p>400：请求参数错误</p>
+<p>401：无权限访问</p>
+<p>404：访问地址不存在</p>
+<p>以5开头的，一般都是失败，而且服务器端的问题偏大</p>
+<p>500：Internal Server Error 未知的服务器错误</p>
+<p>503：Service Unavailable 服务器超负载</p>
+</blockquote>
+<hr>
+<h4 id="AJAX中其他常用的属性和方法"><a href="#AJAX中其他常用的属性和方法" class="headerlink" title="AJAX中其他常用的属性和方法"></a><strong>AJAX中其他常用的属性和方法</strong></h4><blockquote>
+<p>面试题：AJAX中总共支持几个方法？</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"><span class="built_in">console</span>.dir(xhr);</span><br><span class="line"></span><br><span class="line"><span class="comment">//【属性】</span></span><br><span class="line"><span class="comment">// 1.readyState：存储的是当前AJAX的状态码</span></span><br><span class="line"><span class="comment">// response/responseText/responseXML:都是用来接收服务器返回的响应主体中的内容，只是根据服务器返回内容格式的不一样，我们使用不同的属性接收即可</span></span><br><span class="line"><span class="comment">// responseText是最常用的，接收的结果是字符串格式的（一般服务器返回的数据都是JSON格式字符串）</span></span><br><span class="line"><span class="comment">// responseXML偶尔会用到，如果服务器返回的是XML文档数据，我们需要使用这个属性接收</span></span><br><span class="line"><span class="comment">// status：记录了服务器端返回的HTTP状态码</span></span><br><span class="line"><span class="comment">// statusText：对返回的状态码的描述</span></span><br><span class="line"><span class="comment">// timeout：设置当前AJAX请求的超时时间，假设我们设置时间为3000ms，从AJAX 请求发送开始，3秒后响应主体内容还没有返回，浏览器会把当前AJAX请求任务强制断开</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 【方法】</span></span><br><span class="line"><span class="comment">// abort()：强制中断AJAX请求</span></span><br><span class="line"><span class="comment">// getAllResponseHeaders():获取全部的响应头信息（获取的结果是一堆字符串文本）</span></span><br><span class="line"><span class="comment">// getResponseHeader(key):获取指定属性名的响应头信息，例如：xhr.getResponseHeader('date')获取响应头中存储的服务器的时间</span></span><br><span class="line"><span class="comment">// open():打开一个URL地址</span></span><br><span class="line"><span class="comment">// overrideMimeType():重写数据的MIME类型</span></span><br><span class="line"><span class="comment">// send():发送AJAX请求（括号中写的是客户端基于请求主体把信息传递给服务器）</span></span><br><span class="line"><span class="comment">// setRequestHeader(key,value):设置请求头信息（可以是设置自定义请求头信息）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// [事件]</span></span><br><span class="line"><span class="comment">// onabort：当AJAX被中断请求时触发这个事件</span></span><br><span class="line"><span class="comment">// onreadystatechange：AJAX状态发生改变会触发这个事件</span></span><br><span class="line"><span class="comment">// ontimeout:当AJAX请求超时，会触发这个事件</span></span><br></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.open(<span class="string">'get'</span>,<span class="string">'temp.json?_='</span> + <span class="built_in">Math</span>.random(), <span class="literal">true</span>);</span><br><span class="line">xhr.setRequestHeader(<span class="string">'aaa'</span>, <span class="string">'123'</span>); <span class="comment">// 注意：请求头部的内容不得出现中文汉字。设置请求头信息必须在OPEN之后和SEND之前</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置超时</span></span><br><span class="line">xhr.timeout = <span class="number">10</span>;</span><br><span class="line">xhr.ontimeout = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'当前请求已经超时'</span>)；</span><br><span class="line">    xhr.abort();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> &#123;<span class="attr">readyState</span>:state, status&#125; = xhr;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="regexp">/^(2|3)\d&#123;2&#125;$/</span>.test(status)) </span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 在状态为2的时候就可以获取响应头信息</span></span><br><span class="line">    <span class="keyword">if</span> (state === <span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> headerAll = xhr.getAllResponseHeaders(),</span><br><span class="line">            serverDate = xhr.getResponseHeader(<span class="string">'date'</span>); <span class="comment">// 获取的服务器时间是格林尼治时间（相比北京时间差了8小时）,通过new Date 可以把这个时间转换为北京时间</span></span><br><span class="line">        <span class="built_in">console</span>.log(headerAll, <span class="keyword">new</span> <span class="built_in">Date</span>(serverDate);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 在状态为4的时候响应主体内容就已经回来了</span></span><br><span class="line">    <span class="keyword">if</span> (state === <span class="number">4</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> valueText = xhr.responseText, <span class="comment">// 获取到的结果一般都是JSON字符串（可以使用JSON.PARSE把其转换为JSON对象）</span></span><br><span class="line">            valueXML = xhr.responseXML; <span class="comment">// 获取到的结果是XML格式的数据（可以通过XML的一些常规操作获取存储的指定信息）</span></span><br><span class="line">        <span class="comment">// 如果服务器返回的是XML文档，用responseText获取的结果是字符串，而用responseXML获取的是标准XML文档</span></span><br><span class="line">        <span class="built_in">console</span>.log(valueText, valueXML);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">xhr.send(<span class="string">'name=hy&amp;age=6&amp;sex=man'</span>);</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="JS中常用的编码和解码方法"><a href="#JS中常用的编码和解码方法" class="headerlink" title="JS中常用的编码和解码方法"></a>JS中常用的编码和解码方法</h3><blockquote>
+<p>正常的编码解码（非加密）</p>
+<ol>
+<li>escape / unescape: 主要就是把中文汉字进行编码和解码（一般只有JS语言支持：也经常应用于前端页面通信时候的中文汉字编码）</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str = &apos;你好海洋 哈哈&apos;</span><br><span class="line">&quot;你好海洋 哈哈&quot;</span><br><span class="line">escape(str)</span><br><span class="line">&quot;%u4F60%u597D%u6D77%u6D0B%20%u54C8%u54C8&quot;</span><br><span class="line">unescape(&quot;%u4F60%u597D%u6D77%u6D0B%20%u54C8%u54C8&quot;)</span><br><span class="line">&quot;你好海洋 哈哈&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="2">
+<li>encodeURI / decodeURI : 基本上所有的编程语言都支持</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str = &apos;你好海洋 哈哈&apos;</span><br><span class="line">&quot;你好海洋 哈哈&quot;</span><br><span class="line">encodeURI(str)</span><br><span class="line">&quot;%E4%BD%A0%E5%A5%BD%E6%B5%B7%E6%B4%8B%20%E5%93%88%E5%93%88&quot;</span><br><span class="line">decodeURI(&quot;%E4%BD%A0%E5%A5%BD%E6%B5%B7%E6%B4%8B%20%E5%93%88%E5%93%88&quot;)</span><br><span class="line">&quot;你好海洋 哈哈&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="3">
+<li><p>encodeURIComponent / decodeURIComponent 和第二种方式非常类似，区别在于：</p>
+<p>当我们通过URL问号传参的时候，我们传递的参数值还是一个URL或者包含很多的特殊字符，此时为了不影响主要的URL，我们需要把传递的参数值进行编码，使用encodeURI不能编码一些特殊字符，所以只能使用恩codeURLComponent处理</p>
+</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str = &apos;你好海洋 哈哈&apos;</span><br><span class="line">&quot;你好海洋 哈哈&quot;</span><br><span class="line">encodeURIComponent(str)</span><br><span class="line">&quot;%E4%BD%A0%E5%A5%BD%E6%B5%B7%E6%B4%8B%20%E5%93%88%E5%93%88&quot;</span><br><span class="line">decodeURIComponent(&quot;%E4%BD%A0%E5%A5%BD%E6%B5%B7%E6%B4%8B%20%E5%93%88%E5%93%88&quot;)</span><br><span class="line">&quot;你好海洋 哈哈&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'http://wudiufo.github.io/?'</span>,</span><br><span class="line">    obj = &#123;</span><br><span class="line">        name:<span class="string">'haiyang'</span>,</span><br><span class="line">        age:<span class="string">'8'</span>;</span><br><span class="line">        url:<span class="string">'http://www.haiyang.com/?lx=1'</span></span><br><span class="line">    &#125;;</span><br><span class="line"><span class="comment">// 需求：把obj中的每一项属性名和属性值拼接到URL末尾，通过问号传参的方式</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> obj)&#123;</span><br><span class="line">    str+=<span class="string">`<span class="subst">$&#123;key&#125;</span>=<span class="subst">$&#123;<span class="built_in">encodeURIComponent</span>(obj[key])&#125;</span>&amp;`</span>;</span><br><span class="line">    <span class="comment">// 不能使用encodeURI，必须使用encodeURIComponent，原因是encodeURI不能编码特殊的字符</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(str.replace(<span class="regexp">/&amp;$/g</span>), <span class="string">''</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 后期获取URL问号参数的时候，我们把获取的值在依次的解码即可</span></span><br><span class="line"><span class="built_in">String</span>.prototype.myQueryUrlParameter=<span class="function"><span class="keyword">function</span> <span class="title">myQueryUrlParameter</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> reg=<span class="regexp">/[?&amp;]([^?&amp;=]+)(?:=([^?&amp;=]*))?/g</span>,</span><br><span class="line">        obj=&#123;&#125;;</span><br><span class="line">    <span class="keyword">this</span>.replace(reg,(...arg)=&gt;&#123;</span><br><span class="line">        <span class="keyword">let</span> [,key,value]=arg;</span><br><span class="line">        obj[key]=<span class="built_in">decodeURIComponent</span>(value); <span class="comment">//此处获取的时候可以进行解码 </span></span><br><span class="line">    &#125;)；</span><br><span class="line">    <span class="keyword">return</span> obj；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>也可以通过加密的方法进行编码解码</p>
+<ol>
+<li><p>可逆转加密（一般都是团队自己用的规则）</p>
+</li>
+<li><p>不可逆转加密（一般都是基于MD5完成的，可能会把MD5加密后的结果二次加密）</p>
+<hr>
+</li>
+</ol>
+</blockquote>
+<h3 id="AJAX中的同步和异步编程"><a href="#AJAX中的同步和异步编程" class="headerlink" title="AJAX中的同步和异步编程"></a>AJAX中的同步和异步编程</h3><blockquote>
+<p>AJAX这个任务：发送请求接收到响应主体内容（完成一个完整的HTTP事务）</p>
+<p>xhr.send() : 任务开始</p>
+<p>xhr.readState===4 : 任务结束</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.open(<span class="string">'get'</span>, <span class="string">'temp.json'</span>, <span class="literal">false</span>);</span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="params">()</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(xhr.readyState);</span><br><span class="line">&#125;;</span><br><span class="line">xhr.send();</span><br><span class="line"><span class="comment">// 只输出一次结果是4</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2018/12/12/什么是AJAX？前后端分离和不分离的优势弊端/ajax.jpg" alt="ajax"></p>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.open(<span class="string">'get'</span>, <span class="string">'temp.json'</span>, <span class="literal">false</span>);</span><br><span class="line">xhr.send(); <span class="comment">// [同步]开始发送AJAX请求，开启AJAX任务，在任务没有完成之前，什么事情都做不了（下面绑定事件也做不了）=》loading =》当readyState===4的时候AJAX任务完成，开始执行下面的操作</span></span><br><span class="line"><span class="comment">// readyState===4</span></span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="params">()</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(xhr.readyState);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 绑定方法之前状态已经为4了，此时AJAX的状态不会再改变成其他的值了，所以事件永远都不会被触发，一次都没执行方法（使用AJAX同步编程，不要把send放在事件监听前，这样我们无法再绑定的方法中获取到响应主体的内容）</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.open(<span class="string">'get'</span>, <span class="string">'temp.json'</span>);</span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="params">()</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(xhr.readyState);</span><br><span class="line">&#125;;</span><br><span class="line">xhr.send();</span><br><span class="line"><span class="comment">// 输出3次，结果分别是2，3 ,4</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2018/12/12/什么是AJAX？前后端分离和不分离的优势弊端/ajax2.jpg" alt="ajax2"></p>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.open(<span class="string">'get'</span>, <span class="string">'temp.json'</span>);</span><br><span class="line">xhr.send();</span><br><span class="line"><span class="comment">// xhr.readyState===1</span></span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="params">()</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(xhr.readyState);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 2,3,4</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="params">()</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(xhr.readyState);</span><br><span class="line">&#125;;</span><br><span class="line">xhr.open(<span class="string">'get'</span>, <span class="string">'temp.json'</span>);</span><br><span class="line">xhr.send();</span><br><span class="line"><span class="comment">// 1,2,3,4</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"><span class="comment">// xhr.readyState===0</span></span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="params">()</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(xhr.readyState);</span><br><span class="line">&#125;;</span><br><span class="line">xhr.open(<span class="string">'get'</span>, <span class="string">'temp.json'</span>,<span class="literal">false</span>);</span><br><span class="line"><span class="comment">// xhr.readyState===1,AJAX特殊处理了一件事，执行OPEN状态变为1，会主动把之前监听的方法执行一次，然后再去执行SEND</span></span><br><span class="line">xhr.send();</span><br><span class="line"><span class="comment">// xhr.readyState===4 AJAX任务结束，住任务队列完成</span></span><br><span class="line"><span class="comment">// 1,4</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -726,8 +859,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/12/CSS详解1/" rel="next" title="CSS详解1">
-                <i class="fa fa-chevron-left"></i> CSS详解1
+              <a href="/2018/12/12/javascript基础详解1/" rel="next" title="javascript基础详解1">
+                <i class="fa fa-chevron-left"></i> javascript基础详解1
               </a>
             
           </div>
@@ -736,8 +869,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/12/jQuery详解1/" rel="prev" title="jQuery详解1">
-                jQuery详解1 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/12/JavaScriptWebApi基础详解1/" rel="prev" title="JavaScriptWebApi基础详解1">
+                JavaScriptWebApi基础详解1 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -817,7 +950,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -959,7 +1092,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX基础知识及核心原理解读"><span class="nav-number">1.</span> <span class="nav-text">AJAX基础知识及核心原理解读</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AJAX基础知识"><span class="nav-number">1.1.</span> <span class="nav-text">AJAX基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XML：可扩展的标记语言"><span class="nav-number">1.1.1.</span> <span class="nav-text">XML：可扩展的标记语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异步的JS"><span class="nav-number">1.1.2.</span> <span class="nav-text">异步的JS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#局部刷新-VS-全局刷新"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">局部刷新 VS 全局刷新</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于原生JS实现AJAX"><span class="nav-number">1.2.</span> <span class="nav-text">基于原生JS实现AJAX</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX基础知识及核心原理解读"><span class="nav-number">1.</span> <span class="nav-text">AJAX基础知识及核心原理解读</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AJAX基础知识"><span class="nav-number">1.1.</span> <span class="nav-text">AJAX基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XML：可扩展的标记语言"><span class="nav-number">1.1.1.</span> <span class="nav-text">XML：可扩展的标记语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异步的JS"><span class="nav-number">1.1.2.</span> <span class="nav-text">异步的JS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#局部刷新-VS-全局刷新"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">局部刷新 VS 全局刷新</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于原生JS实现AJAX"><span class="nav-number">1.2.</span> <span class="nav-text">基于原生JS实现AJAX</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AJAX中其他常用的属性和方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">AJAX中其他常用的属性和方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS中常用的编码和解码方法"><span class="nav-number">1.3.</span> <span class="nav-text">JS中常用的编码和解码方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AJAX中的同步和异步编程"><span class="nav-number">1.4.</span> <span class="nav-text">AJAX中的同步和异步编程</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -998,7 +1131,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">237k</span>
+    <span title="站点总字数">295k</span>
   
 
   
@@ -1007,7 +1140,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:36</span>
+    <span title="站点阅读时长">4:29</span>
   
 </div>
 
